@@ -12,6 +12,9 @@ export const EVENTS = {
         CLOSE_EVENT_DETAILS: 'CLOSE_EVENT_DETAILS',
         ADD_EVENTS: 'ADD_EVENTS',
         TOGGLE_EVENT_LIST: 'TOGGLE_EVENT_LIST',
+        SELECT_EVENTS: 'SELECT_EVENTS',
+        DESELECT_EVENT: 'DESELECT_EVENT',
+        DESELECT_ALL_EVENT: 'DESELECT_ALL_EVENT',
     },
     // Number of ids to look for by single request
     // because url length must stay short
