@@ -434,7 +434,7 @@ export const createStore = (params={}) => {
         thunkMiddleware.withExtraArgument(extraArguments),
 
         // logs actions (this should always be the last middleware)
-        createLogger(),
+        //createLogger(),
     ]
     // return the store
     return _createStore(

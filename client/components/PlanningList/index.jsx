@@ -61,8 +61,11 @@ class PlanningList extends React.Component {
             onCancelEvent,
             onUpdateEventTime,
             onRescheduleEvent,
+            onSelectItem,
+            selected,
         } = this.props
         const planning = plannings[index]
+        const isSelected = selected.indexOf(planning._id) > -1
 
         return (
             <div key={key} style={style}>
@@ -70,7 +73,7 @@ class PlanningList extends React.Component {
                     key={key}
                     style={style}
                     agendas={agendas || []}
-                    active={currentPlanning && currentPlanning._id === planning._id}
+                    active={(currentPlanning && currentPlanning._id === planning._id) || isSelected}
                     item={planning}
                     event={planningsEvents[planning._id]}
                     onSpike={handlePlanningSpike}
@@ -84,7 +87,10 @@ class PlanningList extends React.Component {
                     onAgendaClick={onAgendaClick}
                     privileges={privileges}
                     session={session}
-                    itemLocked={planning.lock_user && planning.lock_session ? true : false} />
+                    itemLocked={planning.lock_user && planning.lock_session ? true : false}
+                    onSelectItem={() => onSelectItem(planning._id)}
+                    isSelected={isSelected}
+                    />
             </div>
         )
     }
@@ -137,6 +143,7 @@ PlanningList.propTypes = {
     onCancelEvent: PropTypes.func,
     onUpdateEventTime: PropTypes.func,
     onRescheduleEvent: PropTypes.func,
+    selected: PropTypes.array,
 }
 
 const mapStateToProps = (state) => ({
@@ -177,6 +184,7 @@ const mapDispatchToProps = (dispatch) => ({
     onCancelEvent: (event) => dispatch(actions.events.ui.openCancelModal(event)),
     onUpdateEventTime: (event) => dispatch(actions.events.ui.updateTime(event)),
     onRescheduleEvent: (event) => dispatch(actions.events.ui.openRescheduleModal(event)),
+    onSelectItem: (itemId) => dispatch(actions.planning.ui.toggleItemSelected(itemId)),
 })
 
 export default connect(mapStateToProps, mapDispatchToProps)(PlanningList)

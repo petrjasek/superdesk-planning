@@ -560,6 +560,36 @@ const saveAndUnpublish = checkPermission(
     'Unauthorised to unpublish a planning item!'
 )
 
+/**
+ * Toggle selected status for given item id
+ *
+ * @param {String} itemId
+ */
+function toggleItemSelected(itemId) {
+    return (dispatch, getState) => {
+        dispatch({
+            type: PLANNING.ACTIONS.TOGGLE_SELECTED,
+            payload: itemId
+        })
+    }
+}
+
+function selectAll() {
+    return (dispatch) => {
+        dispatch({
+            type: PLANNING.ACTIONS.SELECT_ALL,
+        })
+    }
+}
+
+function deselectAll() {
+    return (dispatch) => {
+        dispatch({
+            type: PLANNING.ACTIONS.DESELECT_ALL,
+        })
+    }
+}
+
 const self = {
     spike,
     unspike,
@@ -593,6 +623,9 @@ const self = {
     _resetAdvancedSearch,
     search,
     resetSearch,
+    toggleItemSelected,
+    selectAll,
+    deselectAll,
 }
 
 export default self

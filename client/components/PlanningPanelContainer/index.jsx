@@ -11,6 +11,7 @@ import {
     PlanningList,
 } from '../index'
 import { QuickAddPlanning, Toggle, SearchBar, AdvancedSearchPanelContainer } from '../../components'
+import MultiPlanningSelectionActions from '../MultiPlanningSelectionActions'
 import * as selectors from '../../selectors'
 import { AGENDA } from '../../constants'
 import { eventUtils } from '../../utils/index'
@@ -61,6 +62,9 @@ class PlanningPanel extends React.Component {
             advancedSearchOpened,
             isAdvancedDateSearch,
             isAdvancedSearchSpecified,
+            selected,
+            selectAll,
+            deselectAll,
         } = this.props
 
         return (
@@ -107,8 +111,15 @@ class PlanningPanel extends React.Component {
                             privileges.planning_planning_management === 1 ) &&
                                 <QuickAddPlanning onPlanningCreation={onPlanningCreation}/>
                             }
-                            {(planningList && planningList.length > 0) &&
-                                <PlanningList />
+                            {(selected.length > 0) &&
+                                <MultiPlanningSelectionActions
+                                    selected={selected}
+                                    selectAll={selectAll}
+                                    deselectAll={deselectAll}
+                                />
+                            }
+                            {(planningList.length > 0) &&
+                                <PlanningList selected={selected} />
                             }
                         </div>
                         {
@@ -185,6 +196,7 @@ const mapStateToProps = (state) => ({
     isAdvancedDateSearch: selectors.isAdvancedDateSearch(state),
     isAdvancedSearchSpecified: isObject(selectors.getPlanningSearch(state)),
     session: selectors.getSessionDetails(state),
+    selected: selectors.getSelectedPlanningItems(state),
 })
 
 const mapDispatchToProps = (dispatch) => ({
@@ -201,6 +213,8 @@ const mapDispatchToProps = (dispatch) => ({
     onFutureToggleChange: () => (dispatch(actions.planning.ui.toggleOnlyFutureFilter())),
     closeAdvancedSearch: () =>(dispatch(actions.planning.ui.closeAdvancedSearch())),
     openAdvancedSearch: () =>(dispatch(actions.planning.ui.openAdvancedSearch())),
+    selectAll: () => dispatch(actions.planning.ui.selectAll()),
+    deselectAll: () => dispatch(actions.planning.ui.deselectAll()),
 })
 
 export const PlanningPanelContainer = connect(
