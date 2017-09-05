@@ -65,7 +65,15 @@ class PlanningPanel extends React.Component {
             selected,
             selectAll,
             deselectAll,
+            exportAsArticle,
         } = this.props
+
+        const multiActions = [
+            {
+                name: 'Export as Article',
+                run: exportAsArticle
+            }
+        ]
 
         return (
             <div className={classNames('Planning-panel',
@@ -106,17 +114,22 @@ class PlanningPanel extends React.Component {
                             </label>
                         </div>
                         <AdvancedSearchPanelContainer searchContext={ADVANCED_SEARCH_CONTEXT.PLANNING} />
+
+                        {(selected.length > 0) &&
+                            <div className="Planning-panel__searchbar subnav">
+                                <MultiPlanningSelectionActions
+                                    selected={selected}
+                                    actions={multiActions}
+                                    selectAll={selectAll}
+                                    deselectAll={deselectAll}
+                                />
+                            </div>
+                        }
+
                         <div className="list-view compact-view">
                             {((currentAgendaId || currentAgenda && currentAgenda.is_enabled) &&
                             privileges.planning_planning_management === 1 ) &&
                                 <QuickAddPlanning onPlanningCreation={onPlanningCreation}/>
-                            }
-                            {(selected.length > 0) &&
-                                <MultiPlanningSelectionActions
-                                    selected={selected}
-                                    selectAll={selectAll}
-                                    deselectAll={deselectAll}
-                                />
                             }
                             {(planningList.length > 0) &&
                                 <PlanningList selected={selected} />
@@ -181,6 +194,7 @@ PlanningPanel.propTypes = {
     closeAdvancedSearch: React.PropTypes.func,
     openAdvancedSearch: React.PropTypes.func,
     session: PropTypes.object,
+    selected: PropTypes.array.isRequired,
 }
 
 const mapStateToProps = (state) => ({
@@ -215,6 +229,7 @@ const mapDispatchToProps = (dispatch) => ({
     openAdvancedSearch: () =>(dispatch(actions.planning.ui.openAdvancedSearch())),
     selectAll: () => dispatch(actions.planning.ui.selectAll()),
     deselectAll: () => dispatch(actions.planning.ui.deselectAll()),
+    exportAsArticle: () => dispatch(actions.planning.api.exportAsArticle()),
 })
 
 export const PlanningPanelContainer = connect(

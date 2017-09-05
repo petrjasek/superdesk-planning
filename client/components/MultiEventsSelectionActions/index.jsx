@@ -21,7 +21,7 @@ function MultiEventsSelectionActions({
     session,
 }) {
     const count = selectedEvents.length
-    const classes = classNames('MultiEventsSelectionActions', className)
+    const classes = classNames('MultiSelectionActions', className)
 
     const showSpike = every(selectedEvents, (event) => eventUtils.canSpikeEvent(event, session, privileges))
     const showUnspike = some(selectedEvents, (event) => eventUtils.canUnspikeEvent(event, privileges))
@@ -30,12 +30,12 @@ function MultiEventsSelectionActions({
 
     return (
         <div className={classes}>
-            <div className="MultiEventsSelectionActions__info">
+            <div className="MultiSelectionActions__info">
                 {count} selected event{count > 1 && 's'}&nbsp;
                 <a onClick={selectAll}>select&nbsp;all</a>&nbsp;/&nbsp;
                 <a onClick={deselect}>deselect</a>
             </div>
-            <div className="MultiEventsSelectionActions__actions">
+            <div className="MultiSelectionActions__actions">
                 { showCreatePlan && (
                     <button
                         onClick={createPlanning}

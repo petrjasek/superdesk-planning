@@ -41,6 +41,7 @@ from .planning_cancel import PlanningCancelService, PlanningCancelResource
 from .planning_reschedule import PlanningRescheduleService, PlanningRescheduleResource
 from planning.planning_types import PlanningTypesService, PlanningTypesResource
 from .common import get_max_recurrent_events
+from .planning_export import PlanningExportResource, PlanningExportService
 
 
 def init_app(app):
@@ -138,6 +139,14 @@ def init_app(app):
         PlanningRescheduleResource.endpoint_name,
         app=app,
         service=planning_reschedule_service
+    )
+
+    superdesk.register_resource(
+        'planning_export',
+        PlanningExportResource,
+        PlanningExportService,
+        privilege='planning',
+        _app=app
     )
 
     app.on_updated_events += events_history_service.on_item_updated

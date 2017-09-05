@@ -19,6 +19,7 @@ PlanningStoreService.$inject = [
     'metadata',
     'session',
     'deployConfig',
+    'gettext',
     'gettextCatalog',
     '$q',
 ]
@@ -39,6 +40,7 @@ export function PlanningStoreService(
     metadata,
     session,
     deployConfig,
+    gettext,
     gettextCatalog,
     $q
 ) {
@@ -94,6 +96,10 @@ export function PlanningStoreService(
                 genres: metadata.values.genre,
                 users: data.users,
                 desks: desks.desks._items,
+                workspace: {
+                    currentDeskId: desks.getCurrentDeskId(),
+                    currentStageId: desks.getCurrentStageId(),
+                },
                 session: {
                     sessionId: session.sessionId,
                     identity: session.identity,
@@ -128,6 +134,7 @@ export function PlanningStoreService(
                     session,
                     deployConfig,
                     gettextCatalog,
+                    gettext,
                 },
             })
 

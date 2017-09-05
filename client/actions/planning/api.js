@@ -955,6 +955,21 @@ const markPlanningCancelled = (plan, reason, coverageState) => ({
     },
 })
 
+function exportAsArticle() {
+    return (dispatch, getState, {api, notify, gettext}) => {
+        const state = getState()
+
+        return api.save('planning_export', {
+            desk: state.workspace.currentDeskId,
+            items: state.planning.selectedItems,
+        })
+        .then((item) => {
+            notify.success(gettext('Article was created'))
+            dispatch(actions.planning.ui.deselectAll())
+        })
+    }
+}
+
 const self = {
     spike,
     unspike,
@@ -983,6 +998,7 @@ const self = {
     refetch,
     duplicate,
     markPlanningCancelled,
+    exportAsArticle,
 }
 
 export default self
