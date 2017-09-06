@@ -15,7 +15,9 @@ TEMPLATE = '''
 <p></p>
 <p>Location: {{ item.event.location[0].name }}.</p>
 <p>Editorial note: {{ item.ednote }}</p>
-<p>Planned coverage: {% for coverage in item._coverages %}{{ coverage.g2_content_type }}{% if not loop.last %}, {% endif %}{% endfor %}</p>
+<p>Planned coverage: {% for coverage in item._coverages %}
+    {{ coverage.g2_content_type }}{% if not loop.last %}, {% endif %}
+{% endfor %}</p>
 {% endfor %}
 '''
 
