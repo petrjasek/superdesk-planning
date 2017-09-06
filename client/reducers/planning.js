@@ -271,7 +271,7 @@ const planningReducer = createReducer(initialState, {
 
         return {
             ...state,
-            selectedItems: index === -1 ? selected.concat([payload]) : without(selected, payload)
+            selectedItems: index === -1 ? selected.concat([payload]) : without(selected, payload),
         }
     },
 

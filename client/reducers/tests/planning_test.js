@@ -35,6 +35,7 @@ describe('planning', () => {
                     currentSearch: undefined,
                     advancedSearchOpened: false,
                 },
+                selectedItems: [],
             })
         })
 

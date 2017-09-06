@@ -138,7 +138,7 @@ export function PlanningStoreService(
                 },
             })
 
-            return Promise.resolve(self.store)
+            return self.store
         })
     }
 

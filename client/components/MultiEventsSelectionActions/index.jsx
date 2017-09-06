@@ -5,7 +5,6 @@ import { getSelectedEventsObjects } from '../../selectors'
 import classNames from 'classnames'
 import * as actions from '../../actions'
 import * as selectors from '../../selectors'
-import './style.scss'
 import { every, some } from 'lodash'
 import { eventUtils } from '../../utils'
 

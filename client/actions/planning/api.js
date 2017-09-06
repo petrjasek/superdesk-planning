@@ -955,15 +955,18 @@ const markPlanningCancelled = (plan, reason, coverageState) => ({
     },
 })
 
+/**
+ * Export selected planning items as a new article
+ */
 function exportAsArticle() {
-    return (dispatch, getState, {api, notify, gettext}) => {
+    return (dispatch, getState, { api, notify, gettext }) => {
         const state = getState()
 
         return api.save('planning_export', {
             desk: state.workspace.currentDeskId,
             items: state.planning.selectedItems,
         })
-        .then((item) => {
+        .then(() => {
             notify.success(gettext('Article was created'))
             dispatch(actions.planning.ui.deselectAll())
         })

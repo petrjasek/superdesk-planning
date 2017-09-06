@@ -11,10 +11,10 @@ import {
     PlanningList,
 } from '../index'
 import { QuickAddPlanning, Toggle, SearchBar, AdvancedSearchPanelContainer } from '../../components'
-import MultiPlanningSelectionActions from '../MultiPlanningSelectionActions'
+import MultiSelectionActions from '../MultiSelectionActions'
 import * as selectors from '../../selectors'
 import { AGENDA } from '../../constants'
-import { eventUtils } from '../../utils/index'
+import { eventUtils, gettext } from '../../utils'
 import './style.scss'
 
 class PlanningPanel extends React.Component {
@@ -70,9 +70,9 @@ class PlanningPanel extends React.Component {
 
         const multiActions = [
             {
-                name: 'Export as Article',
-                run: exportAsArticle
-            }
+                name: gettext('Export as Article'),
+                run: exportAsArticle,
+            },
         ]
 
         return (
@@ -117,9 +117,9 @@ class PlanningPanel extends React.Component {
 
                         {(selected.length > 0) &&
                             <div className="Planning-panel__searchbar subnav">
-                                <MultiPlanningSelectionActions
-                                    selected={selected}
+                                <MultiSelectionActions
                                     actions={multiActions}
+                                    selected={selected}
                                     selectAll={selectAll}
                                     deselectAll={deselectAll}
                                 />
@@ -175,26 +175,29 @@ class PlanningPanel extends React.Component {
 }
 
 PlanningPanel.propTypes = {
-    currentAgendaId: React.PropTypes.string,
-    currentAgenda: React.PropTypes.object,
-    planningList: React.PropTypes.array.isRequired,
-    planningsAreLoading: React.PropTypes.bool,
-    onPlanningCreation: React.PropTypes.func,
-    editPlanningViewOpen: React.PropTypes.bool,
-    addEventToCurrentAgenda: React.PropTypes.func,
-    toggleEventsList: React.PropTypes.func,
-    isEventListShown: React.PropTypes.bool,
-    onlyFuture: React.PropTypes.bool,
-    onFutureToggleChange: React.PropTypes.func,
-    handleSearch: React.PropTypes.func.isRequired,
-    privileges: React.PropTypes.object.isRequired,
-    advancedSearchOpened: React.PropTypes.bool,
-    isAdvancedDateSearch: React.PropTypes.bool,
-    isAdvancedSearchSpecified: React.PropTypes.bool,
-    closeAdvancedSearch: React.PropTypes.func,
-    openAdvancedSearch: React.PropTypes.func,
+    currentAgendaId: PropTypes.string,
+    currentAgenda: PropTypes.object,
+    planningList: PropTypes.array.isRequired,
+    planningsAreLoading: PropTypes.bool,
+    onPlanningCreation: PropTypes.func,
+    editPlanningViewOpen: PropTypes.bool,
+    addEventToCurrentAgenda: PropTypes.func,
+    toggleEventsList: PropTypes.func,
+    isEventListShown: PropTypes.bool,
+    onlyFuture: PropTypes.bool,
+    onFutureToggleChange: PropTypes.func,
+    handleSearch: PropTypes.func.isRequired,
+    privileges: PropTypes.object.isRequired,
+    advancedSearchOpened: PropTypes.bool,
+    isAdvancedDateSearch: PropTypes.bool,
+    isAdvancedSearchSpecified: PropTypes.bool,
+    closeAdvancedSearch: PropTypes.func,
+    openAdvancedSearch: PropTypes.func,
     session: PropTypes.object,
     selected: PropTypes.array.isRequired,
+    selectAll: PropTypes.func,
+    deselectAll: PropTypes.func,
+    exportAsArticle: PropTypes.func,
 }
 
 const mapStateToProps = (state) => ({

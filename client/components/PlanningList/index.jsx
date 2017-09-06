@@ -143,6 +143,7 @@ PlanningList.propTypes = {
     onCancelEvent: PropTypes.func,
     onUpdateEventTime: PropTypes.func,
     onRescheduleEvent: PropTypes.func,
+    onSelectItem: PropTypes.func,
     selected: PropTypes.array,
 }
 

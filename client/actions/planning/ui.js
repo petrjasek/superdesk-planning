@@ -566,28 +566,23 @@ const saveAndUnpublish = checkPermission(
  * @param {String} itemId
  */
 function toggleItemSelected(itemId) {
-    return (dispatch, getState) => {
-        dispatch({
-            type: PLANNING.ACTIONS.TOGGLE_SELECTED,
-            payload: itemId
-        })
+    return {
+        type: PLANNING.ACTIONS.TOGGLE_SELECTED,
+        payload: itemId,
     }
 }
 
+/**
+ * Select all visible items
+ */
 function selectAll() {
-    return (dispatch) => {
-        dispatch({
-            type: PLANNING.ACTIONS.SELECT_ALL,
-        })
-    }
+    return { type: PLANNING.ACTIONS.SELECT_ALL }
 }
 
+/** * Deselect all selected items
+ */
 function deselectAll() {
-    return (dispatch) => {
-        dispatch({
-            type: PLANNING.ACTIONS.DESELECT_ALL,
-        })
-    }
+    return { type: PLANNING.ACTIONS.DESELECT_ALL }
 }
 
 const self = {

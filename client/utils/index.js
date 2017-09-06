@@ -434,7 +434,7 @@ export const createStore = (params={}) => {
         thunkMiddleware.withExtraArgument(extraArguments),
 
         // logs actions (this should always be the last middleware)
-        //createLogger(),
+        createLogger(),
     ]
     // return the store
     return _createStore(
@@ -638,3 +638,26 @@ export const  getPublishedState = (item) => get(item, 'pubstatus', null)
 export const sanitizeTextForQuery = (text) => (
     text.replace(/\//g, '\\/').replace(/[()]/g, '')
 )
+
+/**
+ * Get translated string
+ *
+ * You can use params in translation like:
+ *
+ *    gettext('Hello {{ name }}', {name: 'John'})
+ *
+ * @param {String} text
+ * @param {Object} params
+ * @return {String}
+ */
+export function gettext(text, params) {
+    const injector = angular.element(document.body).injector()
+
+    if (injector) { // in tests this will be empty
+        const translated = injector.get('gettext')(text)
+
+        return params ? injector.get('$interpolate')(translated)(params) : translated
+    }
+
+    return text
+}

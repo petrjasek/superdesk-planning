@@ -1,7 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import { connect } from 'react-redux'
-import * as actions from '../../actions'
+import { gettext } from '../../utils'
+import './style.scss'
 
 function MultiPlanningSelectionActions(props) {
     const {
@@ -9,7 +9,6 @@ function MultiPlanningSelectionActions(props) {
         deselectAll,
         actions,
     } = props
-    const count = props.selected.length
 
     const stopEvent = (callback) =>
         (event) => {
@@ -18,9 +17,7 @@ function MultiPlanningSelectionActions(props) {
         }
 
     const trigger = (action) =>
-        (event) => {
-            action.run()
-        }
+        () => action.run()
 
     const buttons = actions.map((action) => {
         const className = 'btn btn--' + (action.btn ? action.btn : 'primary')
@@ -32,16 +29,16 @@ function MultiPlanningSelectionActions(props) {
                 className={className}
                 >{action.name}
             </button>
-        );
+        )
     })
 
     return (
         <div className="MultiSelectionActions">
             <div className="MultiSelectionActions__info">
-                {count} selected item{count > 1 && 's'}&nbsp;
-                <a href onClick={stopEvent(selectAll)}>select&nbsp;all</a>
+                {gettext('{{ count }} selected', { count: props.selected.length })}&nbsp;
+                <a href onClick={stopEvent(selectAll)}>{gettext('select all')}</a>
                 &nbsp;/&nbsp;
-                <a href onClick={stopEvent(deselectAll)}>deselect</a>
+                <a href onClick={stopEvent(deselectAll)}>{gettext('deselect')}</a>
             </div>
 
             <div className="MultiSelectionActions__actions">
