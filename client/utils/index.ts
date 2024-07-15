@@ -693,22 +693,21 @@ export const getSearchDateRange = (currentSearch, startOfWeek) => {
     const dateRange = {startDate: null, endDate: null};
 
     if (!get(dates, 'start') && !get(dates, 'end') && !get(dates, 'range')) {
-        dateRange.startDate = moment(moment().format('YYYY-MM-DD'), 'YYYY-MM-DD', true);
-        dateRange.endDate = moment().add(999, 'years');
+        dateRange.startDate = moment().startOf('day');
+        dateRange.endDate = dateRange.startDate.clone().add(1, 'month');
     } else if (get(dates, 'range')) {
         let range = get(dates, 'range');
 
         if (range === MAIN.DATE_RANGE.TODAY) {
-            dateRange.startDate = moment(moment().format('YYYY-MM-DD'), 'YYYY-MM-DD', true);
-            dateRange.endDate = dateRange.startDate.clone().add('86399', 'seconds');
+            dateRange.startDate = moment().startOf('day');
+            dateRange.endDate = dateRange.startDate.clone().add(1, 'day');
         } else if (range === MAIN.DATE_RANGE.TOMORROW) {
-            const tomorrow = moment().add(1, 'day');
-
-            dateRange.startDate = moment(tomorrow.format('YYYY-MM-DD'), 'YYYY-MM-DD', true);
-            dateRange.endDate = tomorrow.clone().add('86399', 'seconds');
+            dateRange.startDate = moment().add(1, 'day')
+                .startOf('day');
+            dateRange.endDate = dateRange.startDate.clone().add(1, 'day');
         } else if (range === MAIN.DATE_RANGE.LAST_24) {
             dateRange.endDate = moment();
-            dateRange.startDate = dateRange.endDate.clone().subtract('86400', 'seconds');
+            dateRange.startDate = dateRange.endDate.clone().subtract(1, 'day');
         } else if (range === MAIN.DATE_RANGE.THIS_WEEK) {
             dateRange.endDate = timeUtils.getStartOfNextWeek(null, startOfWeek);
             dateRange.startDate = dateRange.endDate.clone().subtract(7, 'days');
@@ -719,12 +718,15 @@ export const getSearchDateRange = (currentSearch, startOfWeek) => {
     } else {
         if (get(dates, 'start')) {
             dateRange.startDate = moment(get(dates, 'start'));
+            dateRange.endDate = dateRange.startDate.clone().add(1, 'month');
         }
 
         if (get(dates, 'end')) {
+            dateRange.startDate = moment().startOf('day');
             dateRange.endDate = moment(get(dates, 'end'));
         }
     }
+
     return dateRange;
 };
 

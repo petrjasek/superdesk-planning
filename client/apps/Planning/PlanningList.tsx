@@ -185,19 +185,7 @@ export class PlanningListComponent extends React.PureComponent<IProps> {
             <React.Fragment>
                 <PlanningListSubNav />
                 <ListPanel
-                    groups={(() => {
-                        const dateFilter = currentSearch.advancedSearch?.dates?.start?.toDate()
-                            ?? new Date();
-
-                        dateFilter.setHours(0, 0, 0, 0);
-
-                        return groups.filter((group) => {
-                            const dateStringToJSDate = new Date(group.date);
-
-                            dateStringToJSDate.setHours(0, 0, 0, 0);
-                            return dateStringToJSDate >= dateFilter;
-                        });
-                    })()}
+                    groups={groups}
                     onItemClick={openPreview}
                     onDoubleClick={edit}
                     agendas={agendas}
