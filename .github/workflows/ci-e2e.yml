@@ -16,35 +16,29 @@ jobs:
       RUN_SERVICES: true
       E2E: true
       TZ: Australia/Sydney
+      CYPRESS_SCREENSHOTS_FOLDER: /tmp/cypress
+    defaults:
+      run:
+        working-directory: ./e2e
     steps:
       - uses: actions/checkout@v3
       - uses: actions/setup-node@v3
         with:
           node-version: ${{ matrix.node-version }}
-      - uses: actions/setup-python@v4
-        with:
-          python-version: ${{ matrix.python-version }}
-          cache: 'pip'
-          cache-dependency-path: 'server/requirements.txt'
-      - name: Setup Environment
-        run: ./scripts/ci-install.sh
+      - name: Build server
+        run: docker compose build
+      - name: Start services
+        run: |
+          docker compose pull
+          docker compose up -d
       - name: Build Client
-        working-directory: ./e2e
         run: npm run build
-      - name: Start Services
-        run: ./scripts/ci-start-services.sh
       - name: E2E Suite A
         if: matrix.e2e == 'a'
-        working-directory: ./e2e
         run: npm run cypress-ci -- --spec "cypress/e2e/events/*.cy.ts"
-        env:
-          CYPRESS_SCREENSHOTS_FOLDER: /tmp/cypress
       - name: E2E Suite B
         if: matrix.e2e == 'b'
-        working-directory: ./e2e
         run: npm run cypress-ci -- --spec "cypress/e2e/!(events)/*.cy.ts|cypress/e2e/workqueue.cy.ts"
-        env:
-          CYPRESS_SCREENSHOTS_FOLDER: /tmp/cypress
       - name: Upload screenshots
         if: ${{ failure() }}
         uses: actions/upload-artifact@v2
