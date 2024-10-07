@@ -12,8 +12,6 @@ jobs:
         node-version: ['14']
         e2e: ['a', 'b']
     env:
-      INSTALL_NODE_MODULES: true
-      RUN_SERVICES: true
       E2E: true
       TZ: Australia/Sydney
       CYPRESS_SCREENSHOTS_FOLDER: /tmp/cypress
@@ -30,7 +28,10 @@ jobs:
           docker compose build
           docker compose pull
           docker compose up -d
-      - name: Install client
+      - name: Install planning
+        run: npm ci
+        working-directory: ./
+      - name: Install e2e
         run: npm install
       - name: Build Client
         run: npm run build
