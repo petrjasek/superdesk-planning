@@ -25,12 +25,13 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: ${{ matrix.node-version }}
-      - name: Build server
-        run: docker compose build
-      - name: Start services
+      - name: Start server
         run: |
+          docker compose build
           docker compose pull
           docker compose up -d
+      - name: Install client
+        run: npm install
       - name: Build Client
         run: npm run build
       - name: E2E Suite A
