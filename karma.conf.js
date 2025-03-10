@@ -4,7 +4,7 @@ var webpackConfig = require('./webpack.config.js')
 
 module.exports = function(config) {
     // in karma, entry is read from files prop
-    // webpackConfig.entry = {}
+     webpackConfig.entry = null;
     // webpackConfig.devtool = 'inline-source-map'
     config.set({
 
