@@ -365,7 +365,7 @@ describe('components.Main.ItemManager', () => {
                 itemAction: 'read',
             });
 
-            waitFor(() => manager.onItemIDChanged.callCount > 0)
+            return waitFor(() => manager.onItemIDChanged.callCount > 0)
                 .then(() => {
                     expect(manager.onItemIDChanged.callCount).toBe(1);
                     expect(manager.onItemIDChanged.args[0]).toEqual([jasmine.objectContaining({

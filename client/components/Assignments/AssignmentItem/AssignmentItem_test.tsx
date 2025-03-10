@@ -116,7 +116,7 @@ describe('assignments', () => {
                 const wrapper = getMountedWrapper();
                 const item = wrapper.find('.sd-list-item').first();
 
-                item.simulate('click');
+                return item.simulate('click');
             });
 
             it('does not show red border if assignment is not locked', () => {
