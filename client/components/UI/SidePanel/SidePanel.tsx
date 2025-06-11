@@ -24,7 +24,7 @@ export const SidePanel: React.FC<IProps> = ({
     bg00 = false,
     className = '',
     testId,
-}) => (
+}: IProps) => (
     <div
         className={classNames(
             'side-panel',

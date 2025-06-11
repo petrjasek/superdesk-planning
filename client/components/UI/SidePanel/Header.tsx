@@ -1,14 +1,24 @@
 import React from 'react';
 import classNames from 'classnames';
 
-interface IProps {
+interface IHeaderProps {
     children?: React.ReactNode;
     className?: string;
     darkBlue?: boolean;
     darker?: boolean;
 }
 
-export const Header: React.FC<IProps> = ({children, className, darkBlue = false, darker = false}) => (
+/**
+ * @ngdoc react
+ * @name Header
+ * @description Header Component of a side panel
+ */
+export const Header = ({
+    children,
+    className,
+    darkBlue = false,
+    darker = false,
+}: IHeaderProps) => (
     <div
         className={classNames(
             'side-panel__header',
