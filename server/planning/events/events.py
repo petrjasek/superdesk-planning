@@ -999,9 +999,9 @@ def generate_recurring_dates(
     # if a timezone has been applied, returns UTC
     if tz:
         if date_only:
-            return (tz.localize(dt).astimezone(pytz.UTC).date() for dt in dates)
+            return (tz.localize(dt).astimezone(pytz.UTC).replace(tzinfo=None).date() for dt in dates)
         else:
-            return (tz.localize(dt).astimezone(pytz.UTC) for dt in dates)
+            return (tz.localize(dt).astimezone(pytz.UTC).replace(tzinfo=None) for dt in dates)
     else:
         if date_only:
             return (date.date() for date in dates)

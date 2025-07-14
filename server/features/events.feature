@@ -79,9 +79,9 @@ Feature: Events
                 "accreditation_deadline": "2025-05-05"
             }]}
         """
-        When we get "/events?sort=[("dates.start",1)]&source={"query":{"range":{"dates.start":{"lte":"2015-01-01T00:00:00+0000"}}}}"
+        When we get "/events?sort=[("dates.start",1)]&source={"query":{"range":{"dates.start":{"lte":"2015-01-01T00:00:00%2B0000"}}}}"
         Then we get list with 0 items
-        When we get "/events?sort=[("dates.start",1)]&source={"query":{"range":{"dates.start":{"gte":"2016-01-02T00:00:00+0000"}}}}"
+        When we get "/events?sort=[("dates.start",1)]&source={"query":{"range":{"dates.start":{"gte":"2016-01-02T00:00:00%2B0000"}}}}"
         Then we get list with 1 items
         When we get "/events_history"
         Then we get a list with 1 items
