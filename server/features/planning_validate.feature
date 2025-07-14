@@ -76,8 +76,8 @@ Feature: Planning Validate
             "name": "Test Event",
             "calendars": [],
             "dates": {
-                "start": "2029-11-21T01:00:00.000Z",
-                "end": "2029-11-21T04:00:00.000Z",
+                "start": "2029-11-21T01:00:00+0000",
+                "end": "2029-11-21T04:00:00+0000",
                 "tz": "Australia/Sydney"
             }
 
@@ -107,8 +107,8 @@ Feature: Planning Validate
             "slugline": "Test slugger",
             "calendars": [{"qcode": "cal1", "name": "Calendar 1"}],
             "dates": {
-                "start": "2029-11-21T01:00:00.000Z",
-                "end": "2029-11-21T04:00:00.000Z",
+                "start": "2029-11-21T01:00:00+0000",
+                "end": "2029-11-21T04:00:00+0000",
                 "tz": "Australia/Sydney"
             }
         }
@@ -128,8 +128,8 @@ Feature: Planning Validate
         [{
             "name": "Friday Club",
             "dates": {
-                "start": "2099-11-21T01:00:00.000Z",
-                "end": "2099-11-21T04:00:00.000Z",
+                "start": "2099-11-21T01:00:00+0000",
+                "end": "2099-11-21T04:00:00+0000",
                 "tz": "Australia/Sydney",
                 "recurring_rule": {
                     "frequency": "DAILY",
@@ -151,8 +151,8 @@ Feature: Planning Validate
             "slugline": "Test slugger",
             "calendars": [{"qcode": "cal1", "name": "Calendar 1"}],
             "dates": {
-                "start": "2029-11-21T01:00:00.000Z",
-                "end": "2029-11-21T04:00:00.000Z",
+                "start": "2029-11-21T01:00:00+0000",
+                "end": "2029-11-21T04:00:00+0000",
                 "tz": "Australia/Sydney"
             }
         }
@@ -208,8 +208,8 @@ Feature: Planning Validate
             "calendars": [{"qcode": "cal1", "name": "Calendar 1"}],
             "update_method": "all",
             "dates": {
-                "start": "2029-11-21T01:00:00.000Z",
-                "end": "2029-11-21T04:00:00.000Z",
+                "start": "2029-11-21T01:00:00+0000",
+                "end": "2029-11-21T04:00:00+0000",
                 "tz": "Australia/Sydney"
             }
         }

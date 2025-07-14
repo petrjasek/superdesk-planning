@@ -21,7 +21,7 @@ Feature: Planning autocomplete
             "slugline": "planning-1",
             "language": "en",
             "languages": ["en", "fr", "de"],
-            "planning_date": "2021-01-11T16:00:00.000Z",
+            "planning_date": "2021-01-11T16:00:00+0000",
             "translations": [
                 {"field": "slugline", "language": "en", "value": "planning-en-test"},
                 {"field": "slugline", "language": "de", "value": "planning-de-test"}
@@ -54,7 +54,7 @@ Feature: Planning autocomplete
             "slugline": "planning-1",
             "language": "en",
             "languages": ["en", "fr", "de"],
-            "planning_date": "2021-01-11T16:00:00.000Z",
+            "planning_date": "2021-01-11T16:00:00+0000",
             "coverages": [{
                 "planning": {"language": "en", "slugline": "coverage-en-slugline"},
                 "workflow_state": "draft",
@@ -123,7 +123,7 @@ Feature: Planning autocomplete
             "slugline": "planning-1",
             "language": "en",
             "languages": ["en", "fr", "de"],
-            "planning_date": "2021-01-11T16:00:00.000Z",
+            "planning_date": "2021-01-11T16:00:00+0000",
             "translations": [
                 {"field": "slugline", "language": "en", "value": "planning-en-test"},
                 {"field": "slugline", "language": "de", "value": "planning-de-test"}
@@ -190,7 +190,7 @@ Feature: Planning autocomplete
             "slugline": "package-1",
             "language": "en",
             "languages": ["en", "fr", "de"],
-            "planning_date": "2021-01-11T16:00:00.000Z",
+            "planning_date": "2021-01-11T16:00:00+0000",
             "translations": [
                 {"field": "slugline", "language": "en", "value": "package-en-slugline"},
                 {"field": "slugline", "language": "de", "value": "package-de-slugline"}

@@ -10,7 +10,7 @@ Feature: Duplicate Planning
             "slugline": "test slugline",
             "state": "scheduled",
             "pubstatus": "usable",
-            "planning_date": "2029-11-21T14:00:00.000Z"
+            "planning_date": "2029-11-21T14:00:00+0000"
         }]
         """
         When we patch "/planning/#planning._id#"
@@ -159,7 +159,7 @@ Feature: Duplicate Planning
             "slugline": "test slugline",
             "state": "scheduled",
             "pubstatus": "usable",
-            "planning_date": "2029-11-21T14:00:00.000Z"
+            "planning_date": "2029-11-21T14:00:00+0000"
         }]
         """
         When we patch "/users/#CONTEXT_USER_ID#"
@@ -194,7 +194,7 @@ Feature: Duplicate Planning
             "slugline": "test slugline",
             "state": "scheduled",
             "pubstatus": "usable",
-            "planning_date": "2029-11-21T14:00:00.000Z"
+            "planning_date": "2029-11-21T14:00:00+0000"
         }]
         """
         When we patch "/planning/#planning._id#"
@@ -287,7 +287,7 @@ Feature: Duplicate Planning
             "guid": "123",
             "headline": "test headline",
             "slugline": "test slugline",
-            "planning_date": "2029-11-21T14:00:00.000Z"
+            "planning_date": "2029-11-21T14:00:00+0000"
         }]
         """
         Then we get OK response
@@ -342,13 +342,13 @@ Feature: Duplicate Planning
             "guid": "plan1",
             "slugline": "TestPlan",
             "state": "draft",
-            "planning_date": "2012-11-21T14:00:00.000Z",
+            "planning_date": "2012-11-21T14:00:00+0000",
             "coverages": [{
                 "coverage_id": "cov1",
                 "slugline": "TestCoverage 1",
                 "planning": {
                     "internal_note": "Cover something please!",
-                    "scheduled": "2012-11-21T14:00:00.000Z"
+                    "scheduled": "2012-11-21T14:00:00+0000"
                 },
                 "planning_item": "plan1",
                 "news_coverage_status": {
@@ -386,8 +386,8 @@ Feature: Duplicate Planning
             "guid": "event1",
             "name": "Test Event",
             "dates": {
-                "start": "2029-11-21T12:00:00.000Z",
-                "end": "2029-11-21T14:00:00.000Z",
+                "start": "2029-11-21T12:00:00+0000",
+                "end": "2029-11-21T14:00:00+0000",
                 "tz": "Australia/Sydney"
             },
             "state": "draft"
@@ -401,7 +401,7 @@ Feature: Duplicate Planning
             "slugline": "Test Event",
             "state": "draft",
             "related_events": [{"_id": "event1", "link_type": "primary"}],
-            "planning_date": "2029-11-21T14:00:00.000Z"
+            "planning_date": "2029-11-21T14:00:00+0000"
         }]
         """
         When we post to "/planning/plan1/duplicate"
@@ -432,8 +432,8 @@ Feature: Duplicate Planning
             "guid": "event1",
             "name": "Test Event",
             "dates": {
-                "start": "2029-11-21T12:00:00.000Z",
-                "end": "2029-11-21T14:00:00.000Z",
+                "start": "2029-11-21T12:00:00+0000",
+                "end": "2029-11-21T14:00:00+0000",
                 "tz": "Australia/Sydney"
             },
             "state": "draft",
@@ -448,7 +448,7 @@ Feature: Duplicate Planning
             "slugline": "Test Event",
             "state": "draft",
             "related_events": [{"_id": "event1", "link_type": "primary"}],
-            "planning_date": "2029-11-21T14:00:00.000Z",
+            "planning_date": "2029-11-21T14:00:00+0000",
             "expired": true
         }]
         """
@@ -482,8 +482,8 @@ Feature: Duplicate Planning
             "ednote" : "Ed note in event",
             "state_reason": "A reason why this is cancelled.",
             "dates": {
-                "start": "2029-11-21T12:00:00.000Z",
-                "end": "2029-11-21T14:00:00.000Z",
+                "start": "2029-11-21T12:00:00+0000",
+                "end": "2029-11-21T14:00:00+0000",
                 "tz": "Australia/Sydney"
             },
             "state" : "cancelled"
@@ -498,7 +498,7 @@ Feature: Duplicate Planning
             "state" : "cancelled",
             "state_reason": "A reason why this is cancelled.",
             "related_events": [{"_id": "event1", "link_type": "primary"}],
-            "planning_date": "2029-11-21T14:00:00.000Z",
+            "planning_date": "2029-11-21T14:00:00+0000",
             "ednote" : "This is the ednote in planning",
             "coverages": [
                 {
@@ -553,8 +553,8 @@ Feature: Duplicate Planning
             "ednote" : "Ed note in event",
             "state_reason": "A reason why this is rescheduled.",
             "dates": {
-                "start": "2029-11-21T12:00:00.000Z",
-                "end": "2029-11-21T14:00:00.000Z",
+                "start": "2029-11-21T12:00:00+0000",
+                "end": "2029-11-21T14:00:00+0000",
                 "tz": "Australia/Sydney"
             },
             "state" : "rescheduled"
@@ -568,7 +568,7 @@ Feature: Duplicate Planning
             "slugline": "Test Event",
             "state" : "rescheduled",
             "related_events": [{"_id": "event1", "link_type": "primary"}],
-            "planning_date": "2029-11-21T14:00:00.000Z",
+            "planning_date": "2029-11-21T14:00:00+0000",
             "ednote" : "This is the ednote in planning",
             "state_reason": "A reason why this is rescheduled.",
             "coverages": [
@@ -623,8 +623,8 @@ Feature: Duplicate Planning
                 "guid": "123",
                 "name": "TestEvent",
                 "dates": {
-                    "start": "2029-11-21T12:00:00.000Z",
-                    "end": "2029-11-21T14:00:00.000Z",
+                    "start": "2029-11-21T12:00:00+0000",
+                    "end": "2029-11-21T14:00:00+0000",
                     "tz": "Australia/Sydney"
                 },
                 "state": "scheduled",
@@ -645,7 +645,7 @@ Feature: Duplicate Planning
             "state": "scheduled",
             "pubstatus": "usable",
             "related_events": [{"_id": "123", "link_type": "primary"}],
-            "planning_date": "2029-11-21T14:00:00.000Z"
+            "planning_date": "2029-11-21T14:00:00+0000"
         }]
         """
         When we perform cancel on events "123"
@@ -699,8 +699,8 @@ Feature: Duplicate Planning
                 "guid": "123",
                 "name": "TestEvent",
                 "dates": {
-                    "start": "2029-11-21T12:00:00.000Z",
-                    "end": "2029-11-21T14:00:00.000Z",
+                    "start": "2029-11-21T12:00:00+0000",
+                    "end": "2029-11-21T14:00:00+0000",
                     "tz": "Australia/Sydney"
                 },
                 "state": "draft",
@@ -720,7 +720,7 @@ Feature: Duplicate Planning
             "state": "scheduled",
             "pubstatus": "usable",
             "related_events": [{"_id": "123", "link_type": "primary"}],
-            "planning_date": "2029-11-21T14:00:00.000Z"
+            "planning_date": "2029-11-21T14:00:00+0000"
         }]
         """
         When we perform reschedule on events "123"
@@ -728,8 +728,8 @@ Feature: Duplicate Planning
         {
             "reason": "",
             "dates": {
-                "start": "2029-11-22T12:00:00.000Z",
-                "end": "2029-11-22T14:00:00.000Z",
+                "start": "2029-11-22T12:00:00+0000",
+                "end": "2029-11-22T14:00:00+0000",
                 "tz": "Australia/Sydney"
             }
         }

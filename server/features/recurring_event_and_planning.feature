@@ -5,8 +5,8 @@ Feature: Recurring Events & Planning
         [{
             "name": "Daily Club",
             "dates": {
-                "start": "2050-11-21T12:00:00.000Z",
-                "end": "2050-11-21T14:00:00.000Z",
+                "start": "2050-11-21T12:00:00+0000",
+                "end": "2050-11-21T14:00:00+0000",
                 "tz": "Australia/Sydney",
                 "recurring_rule": {
                     "frequency": "DAILY",
@@ -49,7 +49,7 @@ Feature: Recurring Events & Planning
         [{
             "headline": "test headline",
             "related_events": [{"_id": "#EVENT1._id#", "link_type": "primary", "recurrence_id": "#EVENT1.recurrence_id#"}],
-            "planning_date": "2050-11-21T12:00:00.000Z",
+            "planning_date": "2050-11-21T12:00:00+0000",
             "coverages": [{
                 "workflow_status": "draft",
                 "news_coverage_status": {"qcode": "ncostat:int"},
@@ -57,7 +57,7 @@ Feature: Recurring Events & Planning
                     "headline": "test headline",
                     "slugline": "test slugline",
                     "g2_content_type": "text",
-                    "scheduled": "2050-11-21T15:00:00.000Z"
+                    "scheduled": "2050-11-21T15:00:00+0000"
                 }
             }, {
                 "workflow_status": "draft",
@@ -66,7 +66,7 @@ Feature: Recurring Events & Planning
                     "headline": "test headline",
                     "slugline": "test slugline",
                     "g2_content_type": "picture",
-                    "scheduled": "2050-11-21T16:00:00.000Z"
+                    "scheduled": "2050-11-21T16:00:00+0000"
                 }
             }]
         }]
@@ -96,7 +96,7 @@ Feature: Recurring Events & Planning
         [{
             "headline": "test headline",
             "related_events": [{"_id": "#EVENT2._id#", "link_type": "primary", "recurrence_id": "#EVENT2.recurrence_id#"}],
-            "planning_date": "2050-11-22T12:00:00.000Z",
+            "planning_date": "2050-11-22T12:00:00+0000",
             "update_method": "future",
             "coverages": [{
                 "workflow_status": "draft",
@@ -105,7 +105,7 @@ Feature: Recurring Events & Planning
                     "headline": "test headline",
                     "slugline": "test slugline",
                     "g2_content_type": "text",
-                    "scheduled": "2050-11-22T15:00:00.000Z"
+                    "scheduled": "2050-11-22T15:00:00+0000"
                 }
             }, {
                 "workflow_status": "draft",
@@ -114,7 +114,7 @@ Feature: Recurring Events & Planning
                     "headline": "test headline",
                     "slugline": "test slugline",
                     "g2_content_type": "picture",
-                    "scheduled": "2050-11-22T16:00:00.000Z"
+                    "scheduled": "2050-11-22T16:00:00+0000"
                 }
             }]
         }]
@@ -155,7 +155,7 @@ Feature: Recurring Events & Planning
         [{
             "headline": "test headline",
             "related_events": [{"_id": "#EVENT1._id#", "link_type": "primary", "recurrence_id": "#EVENT1.recurrence_id#"}],
-            "planning_date": "2050-11-21T12:00:00.000Z",
+            "planning_date": "2050-11-21T12:00:00+0000",
             "update_method": "all",
             "coverages": [{
                 "workflow_status": "draft",
@@ -164,7 +164,7 @@ Feature: Recurring Events & Planning
                     "headline": "test headline",
                     "slugline": "test slugline",
                     "g2_content_type": "text",
-                    "scheduled": "2050-11-21T15:00:00.000Z"
+                    "scheduled": "2050-11-21T15:00:00+0000"
                 }
             }, {
                 "workflow_status": "draft",
@@ -173,7 +173,7 @@ Feature: Recurring Events & Planning
                     "headline": "test headline",
                     "slugline": "test slugline",
                     "g2_content_type": "picture",
-                    "scheduled": "2050-11-21T16:00:00.000Z"
+                    "scheduled": "2050-11-21T16:00:00+0000"
                 }
             }]
         }]
@@ -228,13 +228,13 @@ Feature: Recurring Events & Planning
                 "coverages": [{
                     "g2_content_type": "text",
                     "news_coverage_status": "ncostat:int",
-                    "scheduled": "2050-11-22T15:00:00.000Z",
+                    "scheduled": "2050-11-22T15:00:00+0000",
                     "slugline": "test slugline",
                     "headline": "test headline"
                 }, {
                     "g2_content_type": "picture",
                     "news_coverage_status": "ncostat:int",
-                    "scheduled": "2050-11-22T16:00:00.000Z",
+                    "scheduled": "2050-11-22T16:00:00+0000",
                     "slugline": "test slugline",
                     "headline": "test headline"
                 }]
@@ -278,13 +278,13 @@ Feature: Recurring Events & Planning
                 "coverages": [{
                     "g2_content_type": "text",
                     "news_coverage_status": "ncostat:int",
-                    "scheduled": "2050-11-22T15:00:00.000Z",
+                    "scheduled": "2050-11-22T15:00:00+0000",
                     "slugline": "test slugline",
                     "headline": "test headline"
                 }, {
                     "g2_content_type": "picture",
                     "news_coverage_status": "ncostat:int",
-                    "scheduled": "2050-11-22T16:00:00.000Z",
+                    "scheduled": "2050-11-22T16:00:00+0000",
                     "slugline": "test slugline",
                     "headline": "test headline"
                 }]

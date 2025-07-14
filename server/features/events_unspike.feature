@@ -58,8 +58,8 @@ Feature: Events Unspike
         [{
             "name": "Friday Club",
             "dates": {
-                "start": "2099-11-21T12:00:00.000Z",
-                "end": "2099-11-21T14:00:00.000Z",
+                "start": "2099-11-21T12:00:00+0000",
+                "end": "2099-11-21T14:00:00+0000",
                 "tz": "Australia/Sydney",
                 "recurring_rule": {
                     "frequency": "WEEKLY",
@@ -130,8 +130,8 @@ Feature: Events Unspike
         [{
             "name": "Friday Club",
             "dates": {
-                "start": "2099-11-21T12:00:00.000Z",
-                "end": "2099-11-21T14:00:00.000Z",
+                "start": "2099-11-21T12:00:00+0000",
+                "end": "2099-11-21T14:00:00+0000",
                 "tz": "Australia/Sydney",
                 "recurring_rule": {
                     "frequency": "WEEKLY",
@@ -226,8 +226,8 @@ Feature: Events Unspike
         [{
             "name": "Friday Club",
             "dates": {
-                "start": "2099-11-21T12:00:00.000Z",
-                "end": "2099-11-21T14:00:00.000Z",
+                "start": "2099-11-21T12:00:00+0000",
+                "end": "2099-11-21T14:00:00+0000",
                 "tz": "Australia/Sydney",
                 "recurring_rule": {
                     "frequency": "WEEKLY",
@@ -299,8 +299,8 @@ Feature: Events Unspike
         [{
             "name": "Friday Club",
             "dates": {
-                "start": "2099-11-21T12:00:00.000Z",
-                "end": "2099-11-21T14:00:00.000Z",
+                "start": "2099-11-21T12:00:00+0000",
+                "end": "2099-11-21T14:00:00+0000",
                 "tz": "Australia/Sydney",
                 "recurring_rule": {
                     "frequency": "WEEKLY",

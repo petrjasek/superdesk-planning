@@ -8,8 +8,8 @@ Feature: Events Post
         [{
             "name": "Friday Club",
             "dates": {
-                "start": "2029-11-21T23:00:00.000Z",
-                "end": "2029-11-22T02:00:00.000Z",
+                "start": "2029-11-21T23:00:00+0000",
+                "end": "2029-11-22T02:00:00+0000",
                 "tz": "Australia/Sydney",
                 "recurring_rule": {
                     "frequency": "DAILY",
@@ -111,8 +111,8 @@ Feature: Events Post
         [{
             "name": "Friday Club",
             "dates": {
-                "start": "2029-11-21T23:00:00.000Z",
-                "end": "2029-11-22T02:00:00.000Z",
+                "start": "2029-11-21T23:00:00+0000",
+                "end": "2029-11-22T02:00:00+0000",
                 "tz": "Australia/Sydney",
                 "recurring_rule": {
                     "frequency": "DAILY",
@@ -198,8 +198,8 @@ Feature: Events Post
         [{
             "name": "Friday Club",
             "dates": {
-                "start": "2029-11-21T23:00:00.000Z",
-                "end": "2029-11-22T02:00:00.000Z",
+                "start": "2029-11-21T23:00:00+0000",
+                "end": "2029-11-22T02:00:00+0000",
                 "tz": "Australia/Sydney",
                 "recurring_rule": {
                     "frequency": "DAILY",
@@ -293,8 +293,8 @@ Feature: Events Post
             "name": "TestEvent",
             "slugline": "TestEvent",
             "dates": {
-                "start": "2029-11-21T12:00:00.000Z",
-                "end": "2029-11-21T14:00:00.000Z",
+                "start": "2029-11-21T12:00:00+0000",
+                "end": "2029-11-21T14:00:00+0000",
                 "tz": "Australia/Sydney"
             }
         }
@@ -435,8 +435,8 @@ Feature: Events Post
             "name": "TestEvent",
             "slugline": "TestEvent",
             "dates": {
-                "start": "2029-11-21T12:00:00.000Z",
-                "end": "2029-11-21T14:00:00.000Z",
+                "start": "2029-11-21T12:00:00+0000",
+                "end": "2029-11-21T14:00:00+0000",
                 "tz": "Australia/Sydney"
             }
         }
@@ -576,8 +576,8 @@ Feature: Events Post
             "name": "TestEvent",
             "slugline": "TestEvent",
             "dates": {
-                "start": "2029-11-21T12:00:00.000Z",
-                "end": "2029-11-21T14:00:00.000Z",
+                "start": "2029-11-21T12:00:00+0000",
+                "end": "2029-11-21T14:00:00+0000",
                 "tz": "Australia/Sydney"
             }
         }
@@ -739,8 +739,8 @@ Feature: Events Post
             "slugline": "TestEvent",
             "_planning_item": "plan1",
             "dates": {
-                "start": "2029-11-21T12:00:00.000Z",
-                "end": "2029-11-21T14:00:00.000Z",
+                "start": "2029-11-21T12:00:00+0000",
+                "end": "2029-11-21T14:00:00+0000",
                 "tz": "Australia/Sydney"
             }
         }
@@ -797,8 +797,8 @@ Feature: Events Post
             "name": "TestEvent",
             "slugline": "TestEvent",
             "dates": {
-                "start": "2029-11-21T12:00:00.000Z",
-                "end": "2029-11-21T14:00:00.000Z",
+                "start": "2029-11-21T12:00:00+0000",
+                "end": "2029-11-21T14:00:00+0000",
                 "tz": "Australia/Sydney"
             }
         }
@@ -864,8 +864,8 @@ Feature: Events Post
             "name": "TestEvent",
             "slugline": "TestEvent",
             "dates": {
-                "start": "2029-11-21T12:00:00.000Z",
-                "end": "2029-11-21T14:00:00.000Z",
+                "start": "2029-11-21T12:00:00+0000",
+                "end": "2029-11-21T14:00:00+0000",
                 "tz": "Australia/Sydney"
             }
         }
@@ -945,8 +945,8 @@ Feature: Events Post
             "name": "TestEvent",
             "slugline": "TestEvent",
             "dates": {
-                "start": "2029-11-21T12:00:00.000Z",
-                "end": "2029-11-21T14:00:00.000Z",
+                "start": "2029-11-21T12:00:00+0000",
+                "end": "2029-11-21T14:00:00+0000",
                 "tz": "Australia/Sydney"
             }
         }
@@ -1028,8 +1028,8 @@ Feature: Events Post
             "guid": "event1",
             "name": "TestEvent",
             "dates": {
-                "start": "2029-11-21T12:00:00.000Z",
-                "end": "2029-11-26T14:00:00.000Z",
+                "start": "2029-11-21T12:00:00+0000",
+                "end": "2029-11-26T14:00:00+0000",
                 "tz": "Australia/Sydney"
             },
             "state": "draft",
@@ -1090,8 +1090,8 @@ Feature: Events Post
         [{
             "name": "Friday Club",
             "dates": {
-                "start": "2029-11-22T01:00:00.000Z",
-                "end": "2029-11-22T02:00:00.000Z",
+                "start": "2029-11-22T01:00:00+0000",
+                "end": "2029-11-22T02:00:00+0000",
                 "tz": "Australia/Sydney",
                 "recurring_rule": {
                     "frequency": "DAILY",
@@ -1112,7 +1112,7 @@ Feature: Events Post
         """
         {
             "lock_action": "mark_completed",
-            "actioned_date": "2029-11-24T02:00:00.000Z",
+            "actioned_date": "2029-11-24T02:00:00+0000",
             "completed": true
         }
         """
@@ -1163,8 +1163,8 @@ Feature: Events Post
             "name": "Event 123",
             "slugline": "event-123",
             "dates": {
-                "start": "2029-11-21T12:00:00.000Z",
-                "end": "2029-11-21T14:00:00.000Z",
+                "start": "2029-11-21T12:00:00+0000",
+                "end": "2029-11-21T14:00:00+0000",
                 "tz": "Australia/Sydney"
             },
             "event_contact_info": ["#PRIVATE_CONTACT._id#", "#PUBLIC_CONTACT._id#"]
@@ -1234,8 +1234,8 @@ Feature: Events Post
     [{
         "name": "Friday Club",
         "dates": {
-            "start": "2029-11-21T23:00:00.000Z",
-            "end": "2029-11-22T02:00:00.000Z",
+            "start": "2029-11-21T23:00:00+0000",
+            "end": "2029-11-22T02:00:00+0000",
             "tz": "Australia/Sydney"
         },
         "state": "draft"
@@ -1291,8 +1291,8 @@ Feature: Events Post
             "name": "TestEvent",
             "slugline": "TestEvent",
             "dates": {
-                "start": "2029-11-21T12:00:00.000Z",
-                "end": "2029-11-21T14:00:00.000Z",
+                "start": "2029-11-21T12:00:00+0000",
+                "end": "2029-11-21T14:00:00+0000",
                 "tz": "Australia/Sydney"
             }
         }

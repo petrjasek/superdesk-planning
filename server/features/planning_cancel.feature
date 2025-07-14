@@ -19,7 +19,7 @@ Feature: Cancel all coverage
                     "ednote": "test coverage, 250 words",
                     "headline": "test headline",
                     "slugline": "test slugline",
-                    "scheduled": "2029-11-21T14:00:00.000Z",
+                    "scheduled": "2029-11-21T14:00:00+0000",
                     "g2_content_type": "text"
                 },
                 "workflow_status": "draft",
@@ -92,7 +92,7 @@ Feature: Cancel all coverage
                   "ednote": "test coverage, 250 words",
                   "headline": "test headline",
                   "slugline": "test slugline",
-                  "scheduled": "2029-11-21T14:00:00.000Z",
+                  "scheduled": "2029-11-21T14:00:00+0000",
                   "g2_content_type": "text"
               }
           }],
@@ -193,7 +193,7 @@ Feature: Cancel all coverage
                       "ednote": "test coverage, 250 words",
                       "headline": "test headline",
                       "slugline": "test slugline",
-                      "scheduled": "2029-11-21T14:00:00.000Z",
+                      "scheduled": "2029-11-21T14:00:00+0000",
                       "g2_content_type": "text"
                   },
                   "news_coverage_status": {
@@ -354,7 +354,7 @@ Feature: Cancel all coverage
                       "ednote": "test coverage, 250 words",
                       "headline": "test headline",
                       "slugline": "test slugline",
-                      "scheduled": "2029-11-21T14:00:00.000Z",
+                      "scheduled": "2029-11-21T14:00:00+0000",
                       "g2_content_type": "text"
                   },
                   "news_coverage_status": {
@@ -814,7 +814,7 @@ Feature: Cancel all coverage
                     "ednote": "test coverage, 250 words",
                     "headline": "test headline",
                     "slugline": "test slugline",
-                    "scheduled": "2029-11-21T14:00:00.000Z",
+                    "scheduled": "2029-11-21T14:00:00+0000",
                     "g2_content_type": "text"
                 },
                 "workflow_status": "draft",

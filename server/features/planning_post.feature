@@ -428,7 +428,7 @@ Feature: Post Planning
         [{
             "headline": "Plan 1",
             "slugline": "plan-1",
-            "planning_date": "2029-11-21T12:00:00.000Z"
+            "planning_date": "2029-11-21T12:00:00+0000"
         }]
         """
         Then we get OK response

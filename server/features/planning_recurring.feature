@@ -5,8 +5,8 @@ Feature: Recurring Events & Planning
         [{
             "name": "Daily Club",
             "dates": {
-                "start": "2024-11-21T12:00:00.000Z",
-                "end": "2024-11-21T14:00:00.000Z",
+                "start": "2024-11-21T12:00:00+0000",
+                "end": "2024-11-21T14:00:00+0000",
                 "tz": "Australia/Sydney",
                 "recurring_rule": {
                     "frequency": "DAILY",
@@ -45,7 +45,7 @@ Feature: Recurring Events & Planning
         """
         [{
             "related_events": [{"_id": "#EVENT1._id#", "link_type": "primary"}],
-            "planning_date": "2024-11-21T12:00:00.000Z",
+            "planning_date": "2024-11-21T12:00:00+0000",
             "update_method": "all",
             "coverages": [{
                 "workflow_status": "draft",
@@ -53,7 +53,7 @@ Feature: Recurring Events & Planning
                 "planning": {
                     "slugline": "test text slugline",
                     "g2_content_type": "text",
-                    "scheduled": "2024-11-21T15:00:00.000Z"
+                    "scheduled": "2024-11-21T15:00:00+0000"
                 }
             }, {
                 "workflow_status": "draft",
@@ -61,7 +61,7 @@ Feature: Recurring Events & Planning
                 "planning": {
                     "slugline": "test pic slugline",
                     "g2_content_type": "picture",
-                    "scheduled": "2024-11-21T16:00:00.000Z"
+                    "scheduled": "2024-11-21T16:00:00+0000"
                 }
             }]
         }]
@@ -179,7 +179,7 @@ Feature: Recurring Events & Planning
                     "planning": {
                         "slugline": "test text slugline v2",
                         "g2_content_type": "text",
-                        "scheduled": "2024-11-22T15:00:00.000Z"
+                        "scheduled": "2024-11-22T15:00:00+0000"
                     }
                 },
                 {
@@ -190,7 +190,7 @@ Feature: Recurring Events & Planning
                     "planning": {
                         "slugline": "test pic slugline v2",
                         "g2_content_type": "picture",
-                        "scheduled": "2024-11-22T16:00:00.000Z"
+                        "scheduled": "2024-11-22T16:00:00+0000"
                     }
                 }
             ]
@@ -391,7 +391,7 @@ Feature: Recurring Events & Planning
                     "planning": {
                         "slugline": "test text slugline v2",
                         "g2_content_type": "text",
-                        "scheduled": "2024-11-22T17:00:00.000Z"
+                        "scheduled": "2024-11-22T17:00:00+0000"
                     }
                 },
                 {
@@ -402,7 +402,7 @@ Feature: Recurring Events & Planning
                     "planning": {
                         "slugline": "test pic slugline v2",
                         "g2_content_type": "picture",
-                        "scheduled": "2024-11-22T18:00:00.000Z"
+                        "scheduled": "2024-11-22T18:00:00+0000"
                     }
                 }
             ]
@@ -492,7 +492,7 @@ Feature: Recurring Events & Planning
                     "planning": {
                         "slugline": "test text slugline v2",
                         "g2_content_type": "text",
-                        "scheduled": "2024-11-22T17:00:00.000Z"
+                        "scheduled": "2024-11-22T17:00:00+0000"
                     }
                 },
                 {
@@ -503,7 +503,7 @@ Feature: Recurring Events & Planning
                     "planning": {
                         "slugline": "test pic slugline v2",
                         "g2_content_type": "picture",
-                        "scheduled": "2024-11-22T18:00:00.000Z"
+                        "scheduled": "2024-11-22T18:00:00+0000"
                     }
                 }
             ]

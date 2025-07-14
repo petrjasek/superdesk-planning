@@ -12,8 +12,8 @@ Feature: Events Cancel
             "guid": "event1",
             "name": "TestEvent",
             "dates": {
-                "start": "2029-11-21T12:00:00.000Z",
-                "end": "2029-11-21T14:00:00.000Z",
+                "start": "2029-11-21T12:00:00+0000",
+                "end": "2029-11-21T14:00:00+0000",
                 "tz": "Australia/Sydney"
             },
             "state": "draft",
@@ -82,8 +82,8 @@ Feature: Events Cancel
             "guid": "event1",
             "name": "TestEvent",
             "dates": {
-                "start": "2029-11-21T12:00:00.000Z",
-                "end": "2029-11-21T14:00:00.000Z",
+                "start": "2029-11-21T12:00:00+0000",
+                "end": "2029-11-21T14:00:00+0000",
                 "tz": "Australia/Sydney"
             },
             "state": "draft",
@@ -147,8 +147,8 @@ Feature: Events Cancel
             "guid": "event1",
             "name": "TestEvent",
             "dates": {
-                "start": "2029-11-21T12:00:00.000Z",
-                "end": "2029-11-21T14:00:00.000Z",
+                "start": "2029-11-21T12:00:00+0000",
+                "end": "2029-11-21T14:00:00+0000",
                 "tz": "Australia/Sydney"
             },
             "state": "draft",
@@ -288,8 +288,8 @@ Feature: Events Cancel
         [{
             "name": "Friday Club",
             "dates": {
-                "start": "2099-11-21T12:00:00.000Z",
-                "end": "2099-11-21T14:00:00.000Z",
+                "start": "2099-11-21T12:00:00+0000",
+                "end": "2099-11-21T14:00:00+0000",
                 "tz": "Australia/Sydney",
                 "recurring_rule": {
                     "frequency": "DAILY",
@@ -355,7 +355,7 @@ Feature: Events Cancel
                 "headline": "test headline",
                 "slugline": "test slugline",
                 "g2_content_type": "text",
-                "scheduled": "2029-11-21T14:00:00.000Z"
+                "scheduled": "2029-11-21T14:00:00+0000"
             },
             "assigned_to": {
                 "desk": "#desks._id#",
@@ -371,8 +371,8 @@ Feature: Events Cancel
             "guid": "event1",
             "name": "TestEvent",
             "dates": {
-                "start": "2029-11-21T12:00:00.000Z",
-                "end": "2029-11-21T14:00:00.000Z",
+                "start": "2029-11-21T12:00:00+0000",
+                "end": "2029-11-21T14:00:00+0000",
                 "tz": "Australia/Sydney"
             },
             "ednote":  "An event with exciting things",
@@ -417,7 +417,7 @@ Feature: Events Cancel
                         "assignment_id": "aaaaaaaaaaaaaaaaaaaaaaaa"
                   }
             }],
-            "planning_date": "2029-11-21T14:00:00.000Z"
+            "planning_date": "2029-11-21T14:00:00+0000"
         }]
         """
         When we perform cancel on events "event1"
@@ -477,16 +477,16 @@ Feature: Events Cancel
             "_id": "event1",
             "guid": "event1",
             "dates": {
-                "start": "2029-11-21T12:00:00.000Z",
-                "end": "2029-11-21T14:00:00.000Z",
+                "start": "2029-11-21T12:00:00+0000",
+                "end": "2029-11-21T14:00:00+0000",
                 "tz": "Australia/Sydney"
             }
         }, {
             "_id": "event2",
             "guid": "event2",
             "dates": {
-                "start": "2029-11-21T12:00:00.000Z",
-                "end": "2029-11-21T14:00:00.000Z",
+                "start": "2029-11-21T12:00:00+0000",
+                "end": "2029-11-21T14:00:00+0000",
                 "tz": "Australia/Sydney"
             },
             "lock_user": "#CONTEXT_USER_ID#",
@@ -497,8 +497,8 @@ Feature: Events Cancel
             "_id": "event3",
             "guid": "event3",
             "dates": {
-                "start": "2029-11-21T12:00:00.000Z",
-                "end": "2029-11-21T14:00:00.000Z",
+                "start": "2029-11-21T12:00:00+0000",
+                "end": "2029-11-21T14:00:00+0000",
                 "tz": "Australia/Sydney"
             },
             "lock_user": "user123",
@@ -509,8 +509,8 @@ Feature: Events Cancel
             "_id": "event4",
             "guid": "event4",
             "dates": {
-                "start": "2029-11-21T12:00:00.000Z",
-                "end": "2029-11-21T14:00:00.000Z",
+                "start": "2029-11-21T12:00:00+0000",
+                "end": "2029-11-21T14:00:00+0000",
                 "tz": "Australia/Sydney"
             },
             "lock_user": "#CONTEXT_USER_ID#",
@@ -552,8 +552,8 @@ Feature: Events Cancel
             "guid": "event1",
             "name": "TestEvent",
             "dates": {
-                "start": "2029-11-21T12:00:00.000Z",
-                "end": "2029-11-21T14:00:00.000Z",
+                "start": "2029-11-21T12:00:00+0000",
+                "end": "2029-11-21T14:00:00+0000",
                 "tz": "Australia/Sydney"
             },
             "state": "rescheduled",
@@ -599,8 +599,8 @@ Feature: Events Cancel
         [{
             "name": "Friday Club",
             "dates": {
-                "start": "2099-11-21T12:00:00.000Z",
-                "end": "2099-11-21T14:00:00.000Z",
+                "start": "2099-11-21T12:00:00+0000",
+                "end": "2099-11-21T14:00:00+0000",
                 "tz": "Australia/Sydney",
                 "recurring_rule": {
                     "frequency": "DAILY",
@@ -664,8 +664,8 @@ Feature: Events Cancel
             "guid": "event1",
             "name": "TestEvent",
             "dates": {
-                "start": "2029-11-21T12:00:00.000Z",
-                "end": "2029-11-21T14:00:00.000Z",
+                "start": "2029-11-21T12:00:00+0000",
+                "end": "2029-11-21T14:00:00+0000",
                 "tz": "Australia/Sydney"
             },
             "state": "scheduled",
@@ -750,8 +750,8 @@ Feature: Events Cancel
             "guid": "event1",
             "name": "TestEvent",
             "dates": {
-                "start": "2029-11-21T12:00:00.000Z",
-                "end": "2029-11-27T14:00:00.000Z",
+                "start": "2029-11-21T12:00:00+0000",
+                "end": "2029-11-27T14:00:00+0000",
                 "tz": "Australia/Sydney"
             },
             "state": "draft",
@@ -802,8 +802,8 @@ Feature: Events Cancel
             "guid": "event1",
             "name": "TestEvent",
             "dates": {
-                "start": "2029-11-21T12:00:00.000Z",
-                "end": "2029-11-21T14:00:00.000Z",
+                "start": "2029-11-21T12:00:00+0000",
+                "end": "2029-11-21T14:00:00+0000",
                 "tz": "Australia/Sydney"
             },
             "state": "draft",
@@ -846,8 +846,8 @@ Feature: Events Cancel
         [{
             "name": "Friday Club",
             "dates": {
-                "start": "2099-11-21T12:00:00.000Z",
-                "end": "2099-11-21T14:00:00.000Z",
+                "start": "2099-11-21T12:00:00+0000",
+                "end": "2099-11-21T14:00:00+0000",
                 "tz": "Australia/Sydney",
                 "recurring_rule": {
                     "frequency": "DAILY",

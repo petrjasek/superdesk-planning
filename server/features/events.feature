@@ -79,9 +79,9 @@ Feature: Events
                 "accreditation_deadline": "2025-05-05"
             }]}
         """
-        When we get "/events?sort=[("dates.start",1)]&source={"query":{"range":{"dates.start":{"lte":"2015-01-01T00:00:00.000Z"}}}}"
+        When we get "/events?sort=[("dates.start",1)]&source={"query":{"range":{"dates.start":{"lte":"2015-01-01T00:00:00+0000"}}}}"
         Then we get list with 0 items
-        When we get "/events?sort=[("dates.start",1)]&source={"query":{"range":{"dates.start":{"gte":"2016-01-02T00:00:00.000Z"}}}}"
+        When we get "/events?sort=[("dates.start",1)]&source={"query":{"range":{"dates.start":{"gte":"2016-01-02T00:00:00+0000"}}}}"
         Then we get list with 1 items
         When we get "/events_history"
         Then we get a list with 1 items
@@ -461,8 +461,8 @@ Feature: Events
             "guid": "event1",
             "name": "Test Event",
             "dates": {
-                "start": "2029-11-21T12:00:00.000Z",
-                "end": "2029-11-21T14:00:00.000Z",
+                "start": "2029-11-21T12:00:00+0000",
+                "end": "2029-11-21T14:00:00+0000",
                 "tz": "Australia/Sydney"
             },
             "state": "draft",
@@ -474,8 +474,8 @@ Feature: Events
         [{
             "name": "Test Event",
             "dates": {
-                "start": "2029-11-21T12:00:00.000Z",
-                "end": "2029-11-21T14:00:00.000Z",
+                "start": "2029-11-21T12:00:00+0000",
+                "end": "2029-11-21T14:00:00+0000",
                 "tz": "Australia/Sydney"
             },
             "state": "draft",
@@ -687,8 +687,8 @@ Feature: Events
             "slugline": "TestEvent",
             "_planning_item": "plan1",
             "dates": {
-                "start": "2029-11-21T12:00:00.000Z",
-                "end": "2029-11-21T14:00:00.000Z",
+                "start": "2029-11-21T12:00:00+0000",
+                "end": "2029-11-21T14:00:00+0000",
                 "tz": "Australia/Sydney"
             }
         }
@@ -774,8 +774,8 @@ Feature: Events
             "slugline": "event-1",
             "_planning_item": "plan1",
             "dates": {
-                "start": "2029-11-21T12:00:00.000Z",
-                "end": "2029-11-21T14:00:00.000Z",
+                "start": "2029-11-21T12:00:00+0000",
+                "end": "2029-11-21T14:00:00+0000",
                 "tz": "Australia/Sydney"
             }
         }
@@ -794,8 +794,8 @@ Feature: Events
             "slugline": "event-2",
             "_planning_item": "plan1",
             "dates": {
-                "start": "2029-11-21T12:00:00.000Z",
-                "end": "2029-11-21T14:00:00.000Z",
+                "start": "2029-11-21T12:00:00+0000",
+                "end": "2029-11-21T14:00:00+0000",
                 "tz": "Australia/Sydney"
             }
         }
@@ -860,8 +860,8 @@ Feature: Events
             "slugline": "event-1",
             "_planning_item": "plan1",
             "dates": {
-                "start": "2029-11-21T12:00:00.000Z",
-                "end": "2029-11-21T14:00:00.000Z",
+                "start": "2029-11-21T12:00:00+0000",
+                "end": "2029-11-21T14:00:00+0000",
                 "tz": "Australia/Sydney"
             }
         }
@@ -892,8 +892,8 @@ Feature: Events
             "slugline": "TestEvent",
             "_planning_item": "plan1",
             "dates": {
-                "start": "2029-11-21T12:00:00.000Z",
-                "end": "2029-11-21T14:00:00.000Z",
+                "start": "2029-11-21T12:00:00+0000",
+                "end": "2029-11-21T14:00:00+0000",
                 "tz": "Australia/Sydney"
             }
         }
@@ -1230,7 +1230,7 @@ Feature: Events
         """
         [{
             "slugline": "test slugline",
-            "planning_date": "2029-11-21T12:00:00.000Z"
+            "planning_date": "2029-11-21T12:00:00+0000"
         }]
         """
         Then we get OK response
@@ -1276,8 +1276,8 @@ Feature: Events
             "slugline": "TestEvent",
             "_planning_item": "#planning._id#",
             "dates": {
-                "start": "2029-11-21T12:00:00.000Z",
-                "end": "2029-11-21T14:00:00.000Z",
+                "start": "2029-11-21T12:00:00+0000",
+                "end": "2029-11-21T14:00:00+0000",
                 "tz": "Australia/Sydney"
             }
         }
@@ -1299,7 +1299,7 @@ Feature: Events
         """
         {
             "completed": true,
-            "actioned_date": "2029-11-21T12:00:00.000Z"
+            "actioned_date": "2029-11-21T12:00:00+0000"
         }
         """
         Then we get OK response
@@ -1385,7 +1385,7 @@ Feature: Events
         """
         [{
             "slugline": "test slugline",
-            "planning_date": "2029-11-21T12:00:00.000Z"
+            "planning_date": "2029-11-21T12:00:00+0000"
         }]
         """
         Then we get OK response
@@ -1465,8 +1465,8 @@ Feature: Events
             "slugline": "TestEvent",
             "_planning_item": "#planning._id#",
             "dates": {
-                "start": "2029-11-21T12:00:00.000Z",
-                "end": "2029-11-21T14:00:00.000Z",
+                "start": "2029-11-21T12:00:00+0000",
+                "end": "2029-11-21T14:00:00+0000",
                 "tz": "Australia/Sydney"
             }
         }
@@ -1488,7 +1488,7 @@ Feature: Events
         """
         {
             "completed": true,
-            "actioned_date": "2029-11-21T12:00:00.000Z"
+            "actioned_date": "2029-11-21T12:00:00+0000"
         }
         """
         Then we get OK response
@@ -1537,8 +1537,8 @@ Feature: Events
             "guid": "event1",
             "name": "No timezone defined",
             "dates": {
-                "start": "2029-11-21T12:00:00.000Z",
-                "end": "2029-11-21T14:00:00.000Z"
+                "start": "2029-11-21T12:00:00+0000",
+                "end": "2029-11-21T14:00:00+0000"
             }
         }]
         """
@@ -1549,8 +1549,8 @@ Feature: Events
             "guid": "event2",
             "name": "null timezone",
             "dates": {
-                "start": "2029-11-21T12:00:00.000Z",
-                "end": "2029-11-21T14:00:00.000Z",
+                "start": "2029-11-21T12:00:00+0000",
+                "end": "2029-11-21T14:00:00+0000",
                 "tz": null
             }
         }]
@@ -1768,8 +1768,8 @@ Feature: Events
             "slugline": "event-1",
             "_planning_item": "plan1",
             "dates": {
-                "start": "2029-11-21T12:00:00.000Z",
-                "end": "2029-11-21T14:00:00.000Z",
+                "start": "2029-11-21T12:00:00+0000",
+                "end": "2029-11-21T14:00:00+0000",
                 "tz": "Australia/Sydney"
             }
         }
@@ -1818,8 +1818,8 @@ Feature: Events
             "slugline": "event-1",
             "_planning_item": "plan1",
             "dates": {
-                "start": "2029-11-21T12:00:00.000Z",
-                "end": "2029-11-21T14:00:00.000Z",
+                "start": "2029-11-21T12:00:00+0000",
+                "end": "2029-11-21T14:00:00+0000",
                 "tz": "Australia/Sydney"
             }
         }

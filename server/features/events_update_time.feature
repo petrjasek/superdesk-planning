@@ -10,8 +10,8 @@ Feature: Events Update Time
             "_id": "event1",
             "guid": "event1",
             "dates": {
-                "start": "2029-11-21T12:00:00.000Z",
-                "end": "2029-11-21T14:00:00.000Z",
+                "start": "2029-11-21T12:00:00+0000",
+                "end": "2029-11-21T14:00:00+0000",
                 "tz": "Australia/Sydney"
             },
             "lock_user": "#CONTEXT_USER_ID#",
@@ -25,8 +25,8 @@ Feature: Events Update Time
         """
         {
             "dates": {
-                "start": "2029-11-21T02:00:00.000Z",
-                "end": "2029-11-21T04:00:00.000Z",
+                "start": "2029-11-21T02:00:00+0000",
+                "end": "2029-11-21T04:00:00+0000",
                 "tz": "Australia/Sydney"
             }
         }
@@ -72,16 +72,16 @@ Feature: Events Update Time
             "_id": "event1",
             "guid": "event1",
             "dates": {
-                "start": "2029-11-21T12:00:00.000Z",
-                "end": "2029-11-21T14:00:00.000Z",
+                "start": "2029-11-21T12:00:00+0000",
+                "end": "2029-11-21T14:00:00+0000",
                 "tz": "Australia/Sydney"
             }
         }, {
             "_id": "event2",
             "guid": "event2",
             "dates": {
-                "start": "2029-11-21T12:00:00.000Z",
-                "end": "2029-11-21T14:00:00.000Z",
+                "start": "2029-11-21T12:00:00+0000",
+                "end": "2029-11-21T14:00:00+0000",
                 "tz": "Australia/Sydney"
             },
             "lock_user": "#CONTEXT_USER_ID#",
@@ -92,8 +92,8 @@ Feature: Events Update Time
             "_id": "event3",
             "guid": "event3",
             "dates": {
-                "start": "2029-11-21T12:00:00.000Z",
-                "end": "2029-11-21T14:00:00.000Z",
+                "start": "2029-11-21T12:00:00+0000",
+                "end": "2029-11-21T14:00:00+0000",
                 "tz": "Australia/Sydney"
             },
             "lock_user": "user123",
@@ -104,8 +104,8 @@ Feature: Events Update Time
             "_id": "event4",
             "guid": "event4",
             "dates": {
-                "start": "2029-11-21T12:00:00.000Z",
-                "end": "2029-11-21T14:00:00.000Z",
+                "start": "2029-11-21T12:00:00+0000",
+                "end": "2029-11-21T14:00:00+0000",
                 "tz": "Australia/Sydney"
             },
             "lock_user": "#CONTEXT_USER_ID#",
@@ -118,8 +118,8 @@ Feature: Events Update Time
         """
         {
             "dates": {
-                "start": "2029-11-21T02:00:00.000Z",
-                "end": "2029-11-21T04:00:00.000Z",
+                "start": "2029-11-21T02:00:00+0000",
+                "end": "2029-11-21T04:00:00+0000",
                 "tz": "Australia/Sydney"
             }
         }
@@ -132,8 +132,8 @@ Feature: Events Update Time
         """
         {
             "dates": {
-                "start": "2029-11-21T02:00:00.000Z",
-                "end": "2029-11-21T04:00:00.000Z",
+                "start": "2029-11-21T02:00:00+0000",
+                "end": "2029-11-21T04:00:00+0000",
                 "tz": "Australia/Sydney"
             }
         }
@@ -146,8 +146,8 @@ Feature: Events Update Time
         """
         {
             "dates": {
-                "start": "2029-11-21T02:00:00.000Z",
-                "end": "2029-11-21T04:00:00.000Z",
+                "start": "2029-11-21T02:00:00+0000",
+                "end": "2029-11-21T04:00:00+0000",
                 "tz": "Australia/Sydney"
             }
         }
@@ -160,8 +160,8 @@ Feature: Events Update Time
         """
         {
             "dates": {
-                "start": "2029-11-21T02:00:00.000Z",
-                "end": "2029-11-21T04:00:00.000Z",
+                "start": "2029-11-21T02:00:00+0000",
+                "end": "2029-11-21T04:00:00+0000",
                 "tz": "Australia/Sydney"
             }
         }
@@ -180,8 +180,8 @@ Feature: Events Update Time
         [{
             "name": "Friday Club",
             "dates": {
-                "start": "2029-11-21T12:00:00.000Z",
-                "end": "2029-11-21T14:00:00.000Z",
+                "start": "2029-11-21T12:00:00+0000",
+                "end": "2029-11-21T14:00:00+0000",
                 "tz": "Australia/Sydney",
                 "recurring_rule": {
                     "frequency": "DAILY",
@@ -207,8 +207,8 @@ Feature: Events Update Time
         """
         {
             "dates": {
-                "start": "2029-11-22T02:00:00.000Z",
-                "end": "2029-11-22T04:00:00.000Z",
+                "start": "2029-11-22T02:00:00+0000",
+                "end": "2029-11-22T04:00:00+0000",
                 "tz": "Australia/Sydney"
             },
             "update_method": "all"
@@ -297,8 +297,8 @@ Feature: Events Update Time
         [{
             "name": "Friday Club",
             "dates": {
-                "start": "2029-11-21T12:00:00.000Z",
-                "end": "2029-11-21T14:00:00.000Z",
+                "start": "2029-11-21T12:00:00+0000",
+                "end": "2029-11-21T14:00:00+0000",
                 "tz": "Australia/Sydney",
                 "recurring_rule": {
                     "frequency": "DAILY",
@@ -324,8 +324,8 @@ Feature: Events Update Time
         """
         {
             "dates": {
-                "start": "2029-11-22T02:00:00.000Z",
-                "end": "2029-11-22T04:00:00.000Z",
+                "start": "2029-11-22T02:00:00+0000",
+                "end": "2029-11-22T04:00:00+0000",
                 "tz": "Australia/Sydney"
             },
             "update_method": "future"
@@ -414,8 +414,8 @@ Feature: Events Update Time
         [{
             "name": "Friday Club",
             "dates": {
-                "start": "2029-11-21T12:00:00.000Z",
-                "end": "2029-11-21T14:00:00.000Z",
+                "start": "2029-11-21T12:00:00+0000",
+                "end": "2029-11-21T14:00:00+0000",
                 "tz": "Australia/Sydney",
                 "recurring_rule": {
                     "frequency": "DAILY",
@@ -441,8 +441,8 @@ Feature: Events Update Time
         """
         {
             "dates": {
-                "start": "2029-11-22T02:00:00.000Z",
-                "end": "2029-11-22T04:00:00.000Z",
+                "start": "2029-11-22T02:00:00+0000",
+                "end": "2029-11-22T04:00:00+0000",
                 "tz": "Australia/Sydney"
             },
             "update_method": "single"
@@ -532,8 +532,8 @@ Feature: Events Update Time
         [{
             "name": "Friday Club",
             "dates": {
-                "start": "2029-11-18T22:00:00.000Z",
-                "end": "2029-11-19T02:00:00.000Z",
+                "start": "2029-11-18T22:00:00+0000",
+                "end": "2029-11-19T02:00:00+0000",
                 "tz": "Australia/Sydney",
                 "recurring_rule": {
                     "frequency": "WEEKLY",
@@ -568,8 +568,8 @@ Feature: Events Update Time
         {
             "reason": "Changed to the next day!",
             "dates": {
-                "start": "2029-12-04T01:00:00.000Z",
-                "end": "2029-12-04T05:00:00.000Z",
+                "start": "2029-12-04T01:00:00+0000",
+                "end": "2029-12-04T05:00:00+0000",
                 "tz": "Australia/Sydney"
             }
         }
@@ -584,8 +584,8 @@ Feature: Events Update Time
         """
         {
             "dates": {
-                "start": "2029-11-26T03:00:00.000Z",
-                "end": "2029-11-26T09:00:00.000Z",
+                "start": "2029-11-26T03:00:00+0000",
+                "end": "2029-11-26T09:00:00+0000",
                 "tz": "Australia/Sydney"
             },
             "update_method": "all"
@@ -652,8 +652,8 @@ Feature: Events Update Time
         [{
             "name": "Friday Club",
             "dates": {
-                "start": "2029-11-19T03:00:00.000Z",
-                "end": "2029-11-19T09:00:00.000Z",
+                "start": "2029-11-19T03:00:00+0000",
+                "end": "2029-11-19T09:00:00+0000",
                 "tz": "Australia/Sydney",
                 "recurring_rule": {
                     "frequency": "WEEKLY",
@@ -693,8 +693,8 @@ Feature: Events Update Time
         """
         {
             "dates": {
-                "start": "2029-11-25T22:00:00.000Z",
-                "end": "2029-11-26T02:00:00.000Z",
+                "start": "2029-11-25T22:00:00+0000",
+                "end": "2029-11-26T02:00:00+0000",
                 "tz": "Australia/Sydney"
             },
             "update_method": "all"
@@ -753,8 +753,8 @@ Feature: Events Update Time
         [{
             "name": "Friday Club",
             "dates": {
-                "start": "2029-11-19T03:00:00.000Z",
-                "end": "2029-11-19T09:00:00.000Z",
+                "start": "2029-11-19T03:00:00+0000",
+                "end": "2029-11-19T09:00:00+0000",
                 "tz": "Australia/Sydney",
                 "recurring_rule": {
                     "frequency": "WEEKLY",
@@ -794,8 +794,8 @@ Feature: Events Update Time
         """
         {
             "dates": {
-                "start": "2029-11-25T22:00:00.000Z",
-                "end": "2029-11-25T23:30:00.000Z",
+                "start": "2029-11-25T22:00:00+0000",
+                "end": "2029-11-25T23:30:00+0000",
                 "tz": "Australia/Sydney"
             },
             "update_method": "all"
@@ -855,8 +855,8 @@ Feature: Events Update Time
             "_id": "event1",
             "guid": "event1",
             "dates": {
-                "start": "2029-11-21T12:00:00.000Z",
-                "end": "2029-11-21T14:00:00.000Z",
+                "start": "2029-11-21T12:00:00+0000",
+                "end": "2029-11-21T14:00:00+0000",
                 "tz": "Australia/Sydney"
             },
             "lock_user": "#CONTEXT_USER_ID#",
@@ -888,8 +888,8 @@ Feature: Events Update Time
         """
         {
             "dates": {
-                "start": "2029-11-21T02:00:00.000Z",
-                "end": "2029-11-21T04:00:00.000Z",
+                "start": "2029-11-21T02:00:00+0000",
+                "end": "2029-11-21T04:00:00+0000",
                 "tz": "Australia/Sydney"
             }
         }

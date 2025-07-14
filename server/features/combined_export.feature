@@ -43,8 +43,8 @@ Feature: Export combined Planning and Event items with default template
             "guid": "event1",
             "name": "test",
             "dates": {
-                "start": "2021-01-11T14:00:00.000Z",
-                "end": "2021-01-11T16:00:00.000Z",
+                "start": "2021-01-11T14:00:00+0000",
+                "end": "2021-01-11T16:00:00+0000",
                 "tz": "Europe/Prague"
             },
             "location": []
@@ -74,7 +74,7 @@ Feature: Export combined Planning and Event items with default template
                     "g2_content_type": "photo"
                 }
             }],
-            "planning_date": "2021-01-11T16:00:00.000Z"
+            "planning_date": "2021-01-11T16:00:00+0000"
         }, {
             "_id": "plan2",
             "guid": "plan2",
@@ -94,7 +94,7 @@ Feature: Export combined Planning and Event items with default template
                     "g2_content_type": "photo"
                 }
             }],
-            "planning_date": "2021-01-11T16:00:00.000Z"
+            "planning_date": "2021-01-11T16:00:00+0000"
         }]
         """
 

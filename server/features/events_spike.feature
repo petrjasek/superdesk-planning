@@ -234,8 +234,8 @@ Feature: Events Spike
         [{
             "name": "Friday Club",
             "dates": {
-                "start": "2099-11-21T12:00:00.000Z",
-                "end": "2099-11-21T14:00:00.000Z",
+                "start": "2099-11-21T12:00:00+0000",
+                "end": "2099-11-21T14:00:00+0000",
                 "tz": "Australia/Sydney",
                 "recurring_rule": {
                     "frequency": "WEEKLY",
@@ -316,8 +316,8 @@ Feature: Events Spike
         [{
             "name": "Friday Club",
             "dates": {
-                "start": "2099-11-21T12:00:00.000Z",
-                "end": "2099-11-21T14:00:00.000Z",
+                "start": "2099-11-21T12:00:00+0000",
+                "end": "2099-11-21T14:00:00+0000",
                 "tz": "Australia/Sydney",
                 "recurring_rule": {
                     "frequency": "WEEKLY",
@@ -436,8 +436,8 @@ Feature: Events Spike
         [{
             "name": "Friday Club",
             "dates": {
-                "start": "2099-10-08T23:00:00.000Z",
-                "end": "2099-10-09T02:00:00.000Z",
+                "start": "2099-10-08T23:00:00+0000",
+                "end": "2099-10-09T02:00:00+0000",
                 "tz": "Australia/Sydney",
                 "recurring_rule": {
                     "frequency": "WEEKLY",
@@ -491,8 +491,8 @@ Feature: Events Spike
         {
             "reason": "Moving to the Thursday",
             "dates": {
-                "start": "2099-10-29T01:00:00.000Z",
-                "end": "2099-10-29T04:00:00.000Z",
+                "start": "2099-10-29T01:00:00+0000",
+                "end": "2099-10-29T04:00:00+0000",
                 "tz": "Australia/Sydney"
             }
         }
@@ -691,8 +691,8 @@ Feature: Events Spike
             "slugline": "TestEvent",
             "_planning_item": "plan1",
             "dates": {
-                "start": "2029-11-21T12:00:00.000Z",
-                "end": "2029-11-21T14:00:00.000Z",
+                "start": "2029-11-21T12:00:00+0000",
+                "end": "2029-11-21T14:00:00+0000",
                 "tz": "Australia/Sydney"
             }
         }
@@ -729,8 +729,8 @@ Feature: Events Spike
             "name": "TestEvent",
             "slugline": "TestEvent",
             "dates": {
-                "start": "2029-11-21T12:00:00.000Z",
-                "end": "2029-11-21T14:00:00.000Z",
+                "start": "2029-11-21T12:00:00+0000",
+                "end": "2029-11-21T14:00:00+0000",
                 "tz": "Australia/Sydney"
             }
         }]
@@ -879,8 +879,8 @@ Feature: Events Spike
             "name": "TestEvent",
             "slugline": "TestEvent",
             "dates": {
-                "start": "2029-11-21T12:00:00.000Z",
-                "end": "2029-11-21T14:00:00.000Z",
+                "start": "2029-11-21T12:00:00+0000",
+                "end": "2029-11-21T14:00:00+0000",
                 "tz": "Australia/Sydney"
             }
         }
@@ -991,8 +991,8 @@ Feature: Events Spike
             "name": "TestEvent",
             "slugline": "TestEvent",
             "dates": {
-                "start": "2029-11-21T12:00:00.000Z",
-                "end": "2029-11-21T14:00:00.000Z",
+                "start": "2029-11-21T12:00:00+0000",
+                "end": "2029-11-21T14:00:00+0000",
                 "tz": "Australia/Sydney"
             }
         }

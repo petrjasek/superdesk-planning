@@ -1482,7 +1482,7 @@ Feature: Assignment link
                         "ednote": "test coverage, I want 250 words",
                         "headline": "test headline",
                         "slugline": "test slugline",
-                        "scheduled": "2029-11-21T14:00:00.000Z"
+                        "scheduled": "2029-11-21T14:00:00+0000"
                     },
                     "assigned_to": {
                         "assignment_id": "#firstassignment#",
@@ -1502,7 +1502,7 @@ Feature: Assignment link
                         },
                         "planning": {
                             "internal_note": "Int. note",
-                            "scheduled": "2029-11-27T14:00:00.000Z"
+                            "scheduled": "2029-11-27T14:00:00+0000"
                         }
                     },
                     {
@@ -1607,7 +1607,7 @@ Feature: Assignment link
                         "ednote": "test coverage, I want 250 words",
                         "headline": "test headline",
                         "slugline": "test slugline",
-                        "scheduled": "2029-11-21T14:00:00.000Z"
+                        "scheduled": "2029-11-21T14:00:00+0000"
                     },
                     "assigned_to": {
                         "assignment_id": "#firstassignment#",
@@ -1629,7 +1629,7 @@ Feature: Assignment link
                         },
                         "planning": {
                             "internal_note": "Int. note",
-                            "scheduled": "2029-11-27T14:00:00.000Z"
+                            "scheduled": "2029-11-27T14:00:00+0000"
                         }
                     },
                     {
@@ -1769,7 +1769,7 @@ Feature: Assignment link
                         "ednote": "test coverage, I want 250 words",
                         "headline": "test headline",
                         "slugline": "test slugline",
-                        "scheduled": "2029-11-21T14:00:00.000Z"
+                        "scheduled": "2029-11-21T14:00:00+0000"
                     },
                     "assigned_to": {
                         "assignment_id": "#firstassignment#",
@@ -1789,7 +1789,7 @@ Feature: Assignment link
                         },
                         "planning": {
                             "internal_note": "Int. note",
-                            "scheduled": "2029-11-27T14:00:00.000Z"
+                            "scheduled": "2029-11-27T14:00:00+0000"
                         }
                     },
                     {
@@ -1894,7 +1894,7 @@ Feature: Assignment link
                         "ednote": "test coverage, I want 250 words",
                         "headline": "test headline",
                         "slugline": "test slugline",
-                        "scheduled": "2029-11-21T14:00:00.000Z"
+                        "scheduled": "2029-11-21T14:00:00+0000"
                     },
                     "assigned_to": {
                         "assignment_id": "#firstassignment#",
@@ -1916,7 +1916,7 @@ Feature: Assignment link
                         },
                         "planning": {
                             "internal_note": "Int. note",
-                            "scheduled": "2029-11-27T14:00:00.000Z"
+                            "scheduled": "2029-11-27T14:00:00+0000"
                         }
                     },
                     {
@@ -2083,7 +2083,7 @@ Feature: Assignment link
                         "ednote": "test coverage, I want 250 words",
                         "headline": "test headline",
                         "slugline": "test slugline",
-                        "scheduled": "2029-11-21T14:00:00.000Z"
+                        "scheduled": "2029-11-21T14:00:00+0000"
                     },
                     "assigned_to": {
                         "assignment_id": "#firstassignment#",
@@ -2103,7 +2103,7 @@ Feature: Assignment link
                         },
                         "planning": {
                             "internal_note": "Int. note",
-                            "scheduled": "2029-11-27T14:00:00.000Z"
+                            "scheduled": "2029-11-27T14:00:00+0000"
                         }
                     },
                     {
@@ -2208,7 +2208,7 @@ Feature: Assignment link
                         "ednote": "test coverage, I want 250 words",
                         "headline": "test headline",
                         "slugline": "test slugline",
-                        "scheduled": "2029-11-21T14:00:00.000Z"
+                        "scheduled": "2029-11-21T14:00:00+0000"
                     },
                     "assigned_to": {
                         "assignment_id": "#firstassignment#",
@@ -2230,7 +2230,7 @@ Feature: Assignment link
                         },
                         "planning": {
                             "internal_note": "Int. note",
-                            "scheduled": "2029-11-27T14:00:00.000Z"
+                            "scheduled": "2029-11-27T14:00:00+0000"
                         }
                     },
                     {
@@ -2412,7 +2412,7 @@ Feature: Assignment link
                         "ednote": "test coverage, I want 250 words",
                         "headline": "test headline",
                         "slugline": "test slugline",
-                        "scheduled": "2029-11-21T14:00:00.000Z"
+                        "scheduled": "2029-11-21T14:00:00+0000"
                     },
                     "assigned_to": {
                         "assignment_id": "#firstassignment#",
@@ -2432,7 +2432,7 @@ Feature: Assignment link
                         },
                         "planning": {
                             "internal_note": "Int. note",
-                            "scheduled": "2029-11-27T14:00:00.000Z"
+                            "scheduled": "2029-11-27T14:00:00+0000"
                         }
                     },
                     {
@@ -2537,7 +2537,7 @@ Feature: Assignment link
                         "ednote": "test coverage, I want 250 words",
                         "headline": "test headline",
                         "slugline": "test slugline",
-                        "scheduled": "2029-11-21T14:00:00.000Z"
+                        "scheduled": "2029-11-21T14:00:00+0000"
                     },
                     "assigned_to": {
                         "assignment_id": "#firstassignment#",
@@ -2559,7 +2559,7 @@ Feature: Assignment link
                         },
                         "planning": {
                             "internal_note": "Int. note",
-                            "scheduled": "2029-11-27T14:00:00.000Z"
+                            "scheduled": "2029-11-27T14:00:00+0000"
                         }
                     },
                     {
@@ -2739,7 +2739,7 @@ Feature: Assignment link
                         "ednote": "test coverage, I want 250 words",
                         "headline": "test headline",
                         "slugline": "test slugline",
-                        "scheduled": "2029-11-21T14:00:00.000Z"
+                        "scheduled": "2029-11-21T14:00:00+0000"
                     },
                     "assigned_to": {
                         "assignment_id": "#firstassignment#",
@@ -2759,7 +2759,7 @@ Feature: Assignment link
                         },
                         "planning": {
                             "internal_note": "Int. note",
-                            "scheduled": "2029-11-27T14:00:00.000Z"
+                            "scheduled": "2029-11-27T14:00:00+0000"
                         }
                     },
                     {
@@ -2864,7 +2864,7 @@ Feature: Assignment link
                         "ednote": "test coverage, I want 250 words",
                         "headline": "test headline",
                         "slugline": "test slugline",
-                        "scheduled": "2029-11-21T14:00:00.000Z"
+                        "scheduled": "2029-11-21T14:00:00+0000"
                     },
                     "assigned_to": {
                         "assignment_id": "#firstassignment#",
@@ -2886,7 +2886,7 @@ Feature: Assignment link
                         },
                         "planning": {
                             "internal_note": "Int. note",
-                            "scheduled": "2029-11-27T14:00:00.000Z"
+                            "scheduled": "2029-11-27T14:00:00+0000"
                         }
                     },
                     {
@@ -3081,7 +3081,7 @@ Feature: Assignment link
                         "ednote": "test coverage, I want 250 words",
                         "headline": "test headline",
                         "slugline": "test slugline",
-                        "scheduled": "2029-11-21T14:00:00.000Z"
+                        "scheduled": "2029-11-21T14:00:00+0000"
                     },
                     "assigned_to": {
                         "assignment_id": "#firstassignment#",
@@ -3101,7 +3101,7 @@ Feature: Assignment link
                         },
                         "planning": {
                             "internal_note": "Int. note",
-                            "scheduled": "2029-11-27T14:00:00.000Z"
+                            "scheduled": "2029-11-27T14:00:00+0000"
                         }
                     },
                     {
@@ -3206,7 +3206,7 @@ Feature: Assignment link
                         "ednote": "test coverage, I want 250 words",
                         "headline": "test headline",
                         "slugline": "test slugline",
-                        "scheduled": "2029-11-21T14:00:00.000Z"
+                        "scheduled": "2029-11-21T14:00:00+0000"
                     },
                     "assigned_to": {
                         "assignment_id": "#firstassignment#",
@@ -3228,7 +3228,7 @@ Feature: Assignment link
                         },
                         "planning": {
                             "internal_note": "Int. note",
-                            "scheduled": "2029-11-27T14:00:00.000Z"
+                            "scheduled": "2029-11-27T14:00:00+0000"
                         }
                     },
                     {

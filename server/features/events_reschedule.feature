@@ -12,8 +12,8 @@ Feature: Events Reschedule
             "name": "TestEvent",
             "ednote": "Something happening.",
             "dates": {
-                "start": "2029-11-21T12:00:00.000Z",
-                "end": "2029-11-21T14:00:00.000Z",
+                "start": "2029-11-21T12:00:00+0000",
+                "end": "2029-11-21T14:00:00+0000",
                 "tz": "Australia/Sydney"
             },
             "state": "scheduled",
@@ -29,8 +29,8 @@ Feature: Events Reschedule
         {
             "reason": "Changed to the next day!",
             "dates": {
-                "start": "2029-11-22T12:00:00.000Z",
-                "end": "2029-11-22T14:00:00.000Z",
+                "start": "2029-11-22T12:00:00+0000",
+                "end": "2029-11-22T14:00:00+0000",
                 "tz": "Australia/Sydney"
             }
         }
@@ -133,7 +133,7 @@ Feature: Events Reschedule
                 "headline": "test headline",
                 "slugline": "test slugline",
                 "g2_content_type": "text",
-                "scheduled": "2029-11-21T12:00:00.000Z"
+                "scheduled": "2029-11-21T12:00:00+0000"
             },
             "assigned_to": {
                 "desk": "#desks._id#",
@@ -149,8 +149,8 @@ Feature: Events Reschedule
             "guid": "event1",
             "name": "TestEvent",
             "dates": {
-                "start": "2029-11-21T12:00:00.000Z",
-                "end": "2029-11-21T14:00:00.000Z",
+                "start": "2029-11-21T12:00:00+0000",
+                "end": "2029-11-21T14:00:00+0000",
                 "tz": "Australia/Sydney"
             },
             "state": "scheduled",
@@ -197,8 +197,8 @@ Feature: Events Reschedule
         {
             "reason": "Changing to the next day!",
             "dates": {
-                "start": "2029-11-22T12:00:00.000Z",
-                "end": "2029-11-22T14:00:00.000Z"
+                "start": "2029-11-22T12:00:00+0000",
+                "end": "2029-11-22T14:00:00+0000"
             }
         }
         """
@@ -288,8 +288,8 @@ Feature: Events Reschedule
         [{
             "name": "Friday Club",
             "dates": {
-                "start": "2099-11-21T12:00:00.000Z",
-                "end": "2099-11-21T14:00:00.000Z",
+                "start": "2099-11-21T12:00:00+0000",
+                "end": "2099-11-21T14:00:00+0000",
                 "tz": "Australia/Sydney",
                 "recurring_rule": {
                     "frequency": "DAILY",
@@ -326,8 +326,8 @@ Feature: Events Reschedule
         {
             "reason": "Changed to the next day!",
             "dates": {
-                "start": "2099-11-23T13:00:00.000Z",
-                "end": "2099-11-23T15:00:00.000Z",
+                "start": "2099-11-23T13:00:00+0000",
+                "end": "2099-11-23T15:00:00+0000",
                 "tz": "Australia/Sydney",
                 "recurring_rule": {
                     "frequency": "DAILY",
@@ -411,8 +411,8 @@ Feature: Events Reschedule
         [{
             "name": "Friday Club",
             "dates": {
-                "start": "2025-11-20T12:00:00.000Z",
-                "end": "2025-11-20T14:00:00.000Z",
+                "start": "2025-11-20T12:00:00+0000",
+                "end": "2025-11-20T14:00:00+0000",
                 "tz": "Australia/Sydney",
                 "recurring_rule": {
                     "frequency": "WEEKLY",
@@ -487,8 +487,8 @@ Feature: Events Reschedule
         {
             "reason": "Extending number of occurrences",
             "dates": {
-                "start": "2025-11-21T12:00:00.000Z",
-                "end": "2025-11-21T14:00:00.000Z",
+                "start": "2025-11-21T12:00:00+0000",
+                "end": "2025-11-21T14:00:00+0000",
                 "tz": "Australia/Sydney",
                 "recurring_rule": {
                     "frequency": "WEEKLY",
@@ -667,8 +667,8 @@ Feature: Events Reschedule
         [{
             "name": "Friday Club",
             "dates": {
-                "start": "2052-11-22T12:00:00.000Z",
-                "end": "2052-11-22T14:00:00.000Z",
+                "start": "2052-11-22T12:00:00+0000",
+                "end": "2052-11-22T14:00:00+0000",
                 "recurring_rule": {
                     "frequency": "WEEKLY",
                     "interval": 1,
@@ -693,8 +693,8 @@ Feature: Events Reschedule
         """
         {
             "dates": {
-                "start": "2052-12-06T12:00:00.000Z",
-                "end": "2052-12-06T14:00:00.000Z",
+                "start": "2052-12-06T12:00:00+0000",
+                "end": "2052-12-06T14:00:00+0000",
                 "recurring_rule": {
                     "frequency": "WEEKLY",
                     "interval": 1,
@@ -792,8 +792,8 @@ Feature: Events Reschedule
         [{
             "name": "Friday Club",
             "dates": {
-                "start": "2025-11-21T12:00:00.000Z",
-                "end": "2025-11-21T14:00:00.000Z",
+                "start": "2025-11-21T12:00:00+0000",
+                "end": "2025-11-21T14:00:00+0000",
                 "tz": "Australia/Sydney",
                 "recurring_rule": {
                     "frequency": "WEEKLY",
@@ -815,8 +815,8 @@ Feature: Events Reschedule
         """
         {
             "dates": {
-                "start": "2025-11-21T12:00:00.000Z",
-                "end": "2025-11-21T18:00:00.000Z",
+                "start": "2025-11-21T12:00:00+0000",
+                "end": "2025-11-21T18:00:00+0000",
                 "tz": "Australia/Sydney",
                 "recurring_rule": {
                     "frequency": "WEEKLY",
@@ -888,8 +888,8 @@ Feature: Events Reschedule
         [{
             "name": "Friday Club",
             "dates": {
-                "start": "2025-11-21T12:00:00.000Z",
-                "end": "2025-11-21T14:00:00.000Z",
+                "start": "2025-11-21T12:00:00+0000",
+                "end": "2025-11-21T14:00:00+0000",
                 "tz": "Australia/Sydney",
                 "recurring_rule": {
                     "frequency": "WEEKLY",
@@ -919,7 +919,7 @@ Feature: Events Reschedule
                         "internal_note": "test coverage, 250 words",
                         "headline": "test headline",
                         "slugline": "test slugline",
-                        "scheduled": "2025-11-21T14:00:00.000Z",
+                        "scheduled": "2025-11-21T14:00:00+0000",
                         "g2_content_type": "text"
                     },
                     "news_coverage_status": {"qcode": "ncostat:int"},
@@ -1047,8 +1047,8 @@ Feature: Events Reschedule
         {
             "reason": "Event back on at original date and time",
             "dates": {
-                "start": "2025-11-21T12:00:00.000Z",
-                "end": "2025-11-21T14:00:00.000Z",
+                "start": "2025-11-21T12:00:00+0000",
+                "end": "2025-11-21T14:00:00+0000",
                 "tz": "Australia/Sydney",
                 "recurring_rule": {
                     "frequency": "WEEKLY",
@@ -1175,16 +1175,16 @@ Feature: Events Reschedule
             "_id": "event1",
             "guid": "event1",
             "dates": {
-                "start": "2029-11-21T12:00:00.000Z",
-                "end": "2029-11-21T14:00:00.000Z",
+                "start": "2029-11-21T12:00:00+0000",
+                "end": "2029-11-21T14:00:00+0000",
                 "tz": "Australia/Sydney"
             }
         }, {
             "_id": "event2",
             "guid": "event2",
             "dates": {
-                "start": "2029-11-21T12:00:00.000Z",
-                "end": "2029-11-21T14:00:00.000Z",
+                "start": "2029-11-21T12:00:00+0000",
+                "end": "2029-11-21T14:00:00+0000",
                 "tz": "Australia/Sydney"
             },
             "lock_user": "#CONTEXT_USER_ID#",
@@ -1195,8 +1195,8 @@ Feature: Events Reschedule
             "_id": "event3",
             "guid": "event3",
             "dates": {
-                "start": "2029-11-21T12:00:00.000Z",
-                "end": "2029-11-21T14:00:00.000Z",
+                "start": "2029-11-21T12:00:00+0000",
+                "end": "2029-11-21T14:00:00+0000",
                 "tz": "Australia/Sydney"
             },
             "lock_user": "user123",
@@ -1207,8 +1207,8 @@ Feature: Events Reschedule
             "_id": "event4",
             "guid": "event4",
             "dates": {
-                "start": "2029-11-21T12:00:00.000Z",
-                "end": "2029-11-21T14:00:00.000Z",
+                "start": "2029-11-21T12:00:00+0000",
+                "end": "2029-11-21T14:00:00+0000",
                 "tz": "Australia/Sydney"
             },
             "lock_user": "#CONTEXT_USER_ID#",
@@ -1221,8 +1221,8 @@ Feature: Events Reschedule
         """
         {
             "dates": {
-                "start": "2029-11-21T02:00:00.000Z",
-                "end": "2029-11-21T04:00:00.000Z",
+                "start": "2029-11-21T02:00:00+0000",
+                "end": "2029-11-21T04:00:00+0000",
                 "tz": "Australia/Sydney"
             }
         }
@@ -1235,8 +1235,8 @@ Feature: Events Reschedule
         """
         {
             "dates": {
-                "start": "2029-11-21T02:00:00.000Z",
-                "end": "2029-11-21T04:00:00.000Z",
+                "start": "2029-11-21T02:00:00+0000",
+                "end": "2029-11-21T04:00:00+0000",
                 "tz": "Australia/Sydney"
             }
         }
@@ -1249,8 +1249,8 @@ Feature: Events Reschedule
         """
         {
             "dates": {
-                "start": "2029-11-21T02:00:00.000Z",
-                "end": "2029-11-21T04:00:00.000Z",
+                "start": "2029-11-21T02:00:00+0000",
+                "end": "2029-11-21T04:00:00+0000",
                 "tz": "Australia/Sydney"
             }
         }
@@ -1263,8 +1263,8 @@ Feature: Events Reschedule
         """
         {
             "dates": {
-                "start": "2029-11-21T02:00:00.000Z",
-                "end": "2029-11-21T04:00:00.000Z",
+                "start": "2029-11-21T02:00:00+0000",
+                "end": "2029-11-21T04:00:00+0000",
                 "tz": "Australia/Sydney"
             }
         }
@@ -1286,8 +1286,8 @@ Feature: Events Reschedule
             "name": "TestEvent",
             "ednote": "Something happening.",
             "dates": {
-                "start": "2029-11-21T12:00:00.000Z",
-                "end": "2029-11-21T14:00:00.000Z",
+                "start": "2029-11-21T12:00:00+0000",
+                "end": "2029-11-21T14:00:00+0000",
                 "tz": "Australia/Sydney"
             },
             "state": "scheduled",
@@ -1319,8 +1319,8 @@ Feature: Events Reschedule
         {
             "reason": "Changed to the next day!",
             "dates": {
-                "start": "2029-11-22T12:00:00.000Z",
-                "end": "2029-11-22T14:00:00.000Z",
+                "start": "2029-11-22T12:00:00+0000",
+                "end": "2029-11-22T14:00:00+0000",
                 "tz": "Australia/Sydney"
             }
         }
@@ -1395,8 +1395,8 @@ Feature: Events Reschedule
             "name": "TestEvent",
             "ednote": "Something happening.",
             "dates": {
-                "start": "2029-11-21T12:00:00.000Z",
-                "end": "2029-11-21T14:00:00.000Z",
+                "start": "2029-11-21T12:00:00+0000",
+                "end": "2029-11-21T14:00:00+0000",
                 "tz": "Australia/Sydney"
             },
             "state": "postponed",
@@ -1411,8 +1411,8 @@ Feature: Events Reschedule
         {
             "reason": "Changed to the next day!",
             "dates": {
-                "start": "2029-11-22T12:00:00.000Z",
-                "end": "2029-11-22T14:00:00.000Z",
+                "start": "2029-11-22T12:00:00+0000",
+                "end": "2029-11-22T14:00:00+0000",
                 "tz": "Australia/Sydney"
             }
         }
@@ -1477,8 +1477,8 @@ Feature: Events Reschedule
             "name": "TestEvent",
             "ednote": "Something happening.",
             "dates": {
-                "start": "2029-11-11T12:00:00.000Z",
-                "end": "2029-11-11T14:00:00.000Z",
+                "start": "2029-11-11T12:00:00+0000",
+                "end": "2029-11-11T14:00:00+0000",
                 "tz": "Australia/Sydney"
             },
             "state": "scheduled",
@@ -1494,8 +1494,8 @@ Feature: Events Reschedule
         {
             "reason": "Changed to the next day!",
             "dates": {
-                "start": "2029-11-11T12:00:00.000Z",
-                "end": "2029-11-24T14:00:00.000Z",
+                "start": "2029-11-11T12:00:00+0000",
+                "end": "2029-11-24T14:00:00+0000",
                 "tz": "Australia/Sydney"
             }
         }
@@ -1517,8 +1517,8 @@ Feature: Events Reschedule
             "name": "TestEvent",
             "ednote": "Something happening.",
             "dates": {
-                "start": "2029-11-21T12:00:00.000Z",
-                "end": "2029-11-27T14:00:00.000Z",
+                "start": "2029-11-21T12:00:00+0000",
+                "end": "2029-11-27T14:00:00+0000",
                 "tz": "Australia/Sydney"
             },
             "state": "scheduled",
@@ -1534,8 +1534,8 @@ Feature: Events Reschedule
         {
             "reason": "Changed to another day!",
             "dates": {
-                "start": "2029-11-28T12:00:00.000Z",
-                "end": "2029-11-28T14:00:00.000Z",
+                "start": "2029-11-28T12:00:00+0000",
+                "end": "2029-11-28T14:00:00+0000",
                 "tz": "Australia/Sydney"
             }
         }
@@ -1608,8 +1608,8 @@ Feature: Events Reschedule
             "name": "TestEvent",
             "ednote": "Something happening.",
             "dates": {
-                "start": "2029-11-21T12:00:00.000Z",
-                "end": "2029-11-21T14:00:00.000Z",
+                "start": "2029-11-21T12:00:00+0000",
+                "end": "2029-11-21T14:00:00+0000",
                 "tz": "Australia/Sydney"
             },
             "state": "scheduled",
@@ -1625,8 +1625,8 @@ Feature: Events Reschedule
         {
             "reason": "",
             "dates": {
-                "start": "2029-11-22T12:00:00.000Z",
-                "end": "2029-11-22T14:00:00.000Z",
+                "start": "2029-11-22T12:00:00+0000",
+                "end": "2029-11-22T14:00:00+0000",
                 "tz": "Australia/Sydney"
             }
         }
@@ -1637,8 +1637,8 @@ Feature: Events Reschedule
         {
             "reason": "Changed to the next day!",
             "dates": {
-                "start": "2029-11-22T12:00:00.000Z",
-                "end": "2029-11-22T14:00:00.000Z",
+                "start": "2029-11-22T12:00:00+0000",
+                "end": "2029-11-22T14:00:00+0000",
                 "tz": "Australia/Sydney"
             }
         }

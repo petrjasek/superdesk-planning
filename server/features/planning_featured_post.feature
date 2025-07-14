@@ -16,7 +16,7 @@ Feature: Post Featured Planning
         When we post to "/planning_featured"
         """
         [{
-            "date": "2029-11-21T12:00:00.000Z",
+            "date": "2029-11-21T12:00:00+0000",
             "tz": "Australia/Sydney",
             "items": ["#planning._id#"]
         }]
@@ -51,7 +51,7 @@ Feature: Post Featured Planning
         When we post to "/planning_featured"
         """
         [{
-            "date": "2029-11-21T12:00:00.000Z",
+            "date": "2029-11-21T12:00:00+0000",
             "tz": "Australia/Sydney",
             "items": ["#planning._id#"]
         }]
@@ -126,7 +126,7 @@ Feature: Post Featured Planning
         When we post to "/planning_featured"
         """
         [{
-            "date": "2029-11-21T12:00:00.000Z",
+            "date": "2029-11-21T12:00:00+0000",
             "tz": "Australia/Sydney",
             "items": ["#planning._id#"]
         }]

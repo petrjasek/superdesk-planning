@@ -9,8 +9,8 @@ Feature: Events Update Repetitions
         [{
             "name": "Friday Club",
             "dates": {
-                "start": "2029-11-22T01:00:00.000Z",
-                "end": "2029-11-22T04:00:00.000Z",
+                "start": "2029-11-22T01:00:00+0000",
+                "end": "2029-11-22T04:00:00+0000",
                 "tz": "Australia/Sydney",
                 "recurring_rule": {
                     "frequency": "DAILY",
@@ -51,8 +51,8 @@ Feature: Events Update Repetitions
         """
         {
             "dates": {
-                "start": "2029-11-23T01:00:00.000Z",
-                "end": "2029-11-23T04:00:00.000Z",
+                "start": "2029-11-23T01:00:00+0000",
+                "end": "2029-11-23T04:00:00+0000",
                 "tz": "Australia/Sydney",
                 "recurring_rule": {
                     "frequency": "DAILY",
@@ -294,8 +294,8 @@ Feature: Events Update Repetitions
         [{
             "name": "Friday Club",
             "dates": {
-                "start": "2029-11-22T01:00:00.000Z",
-                "end": "2029-11-22T04:00:00.000Z",
+                "start": "2029-11-22T01:00:00+0000",
+                "end": "2029-11-22T04:00:00+0000",
                 "tz": "Australia/Sydney",
                 "recurring_rule": {
                     "frequency": "DAILY",
@@ -329,8 +329,8 @@ Feature: Events Update Repetitions
         """
         {
             "dates": {
-                "start": "2029-11-23T01:00:00.000Z",
-                "end": "2029-11-23T04:00:00.000Z",
+                "start": "2029-11-23T01:00:00+0000",
+                "end": "2029-11-23T04:00:00+0000",
                 "tz": "Australia/Sydney",
                 "recurring_rule": {
                     "frequency": "DAILY",
@@ -385,13 +385,13 @@ Feature: Events Update Repetitions
         [{
             "name": "Friday Club",
             "dates": {
-                "start": "2029-11-22T01:00:00.000Z",
-                "end": "2029-11-22T04:00:00.000Z",
+                "start": "2029-11-22T01:00:00+0000",
+                "end": "2029-11-22T04:00:00+0000",
                 "tz": "Australia/Sydney",
                 "recurring_rule": {
                     "frequency": "DAILY",
                     "interval": 1,
-                    "until": "2029-11-25T01:00:00.000Z",
+                    "until": "2029-11-25T01:00:00+0000",
                     "endRepeatMode": "until"
                 }
             }
@@ -420,13 +420,13 @@ Feature: Events Update Repetitions
         """
         {
             "dates": {
-                "start": "2029-11-23T01:00:00.000Z",
-                "end": "2029-11-23T04:00:00.000Z",
+                "start": "2029-11-23T01:00:00+0000",
+                "end": "2029-11-23T04:00:00+0000",
                 "tz": "Australia/Sydney",
                 "recurring_rule": {
                     "frequency": "DAILY",
                     "interval": 1,
-                    "until": "2029-11-27T01:00:00.000Z",
+                    "until": "2029-11-27T01:00:00+0000",
                     "endRepeatMode": "until",
                     "count": null
                 }
@@ -533,13 +533,13 @@ Feature: Events Update Repetitions
         [{
             "name": "Friday Club",
             "dates": {
-                "start": "2029-11-22T01:00:00.000Z",
-                "end": "2029-11-22T04:00:00.000Z",
+                "start": "2029-11-22T01:00:00+0000",
+                "end": "2029-11-22T04:00:00+0000",
                 "tz": "Australia/Sydney",
                 "recurring_rule": {
                     "frequency": "DAILY",
                     "interval": 1,
-                    "until": "2029-11-25T01:00:00.000Z",
+                    "until": "2029-11-25T01:00:00+0000",
                     "endRepeatMode": "until"
                 }
             }
@@ -568,13 +568,13 @@ Feature: Events Update Repetitions
         """
         {
             "dates": {
-                "start": "2029-11-23T01:00:00.000Z",
-                "end": "2029-11-23T04:00:00.000Z",
+                "start": "2029-11-23T01:00:00+0000",
+                "end": "2029-11-23T04:00:00+0000",
                 "tz": "Australia/Sydney",
                 "recurring_rule": {
                     "frequency": "DAILY",
                     "interval": 1,
-                    "until": "2029-11-23T05:00:00.000Z",
+                    "until": "2029-11-23T05:00:00+0000",
                     "endRepeatMode": "until"
                 }
             }
@@ -624,8 +624,8 @@ Feature: Events Update Repetitions
         [{
             "name": "Friday Club",
             "dates": {
-                "start": "2029-11-22T01:00:00.000Z",
-                "end": "2029-11-22T04:00:00.000Z",
+                "start": "2029-11-22T01:00:00+0000",
+                "end": "2029-11-22T04:00:00+0000",
                 "tz": "Australia/Sydney",
                 "recurring_rule": {
                     "frequency": "DAILY",
@@ -659,13 +659,13 @@ Feature: Events Update Repetitions
         """
         {
             "dates": {
-                "start": "2029-11-23T01:00:00.000Z",
-                "end": "2029-11-23T04:00:00.000Z",
+                "start": "2029-11-23T01:00:00+0000",
+                "end": "2029-11-23T04:00:00+0000",
                 "tz": "Australia/Sydney",
                 "recurring_rule": {
                     "frequency": "DAILY",
                     "interval": 1,
-                    "until": "2029-11-27T01:00:00.000Z",
+                    "until": "2029-11-27T01:00:00+0000",
                     "endRepeatMode": "until",
                     "count": null
                 }
@@ -778,14 +778,14 @@ Feature: Events Update Repetitions
         [{
             "name": "Friday Club",
             "dates": {
-                "start": "2029-11-22T01:00:00.000Z",
-                "end": "2029-11-22T04:00:00.000Z",
+                "start": "2029-11-22T01:00:00+0000",
+                "end": "2029-11-22T04:00:00+0000",
                 "tz": "Australia/Sydney",
                 "recurring_rule": {
                     "frequency": "DAILY",
                     "interval": 1,
                     "endRepeatMode": "until",
-                    "until": "2029-11-25T01:00:00.000Z"
+                    "until": "2029-11-25T01:00:00+0000"
                 }
             }
         }]
@@ -813,8 +813,8 @@ Feature: Events Update Repetitions
         """
         {
             "dates": {
-                "start": "2029-11-23T01:00:00.000Z",
-                "end": "2029-11-23T04:00:00.000Z",
+                "start": "2029-11-23T01:00:00+0000",
+                "end": "2029-11-23T04:00:00+0000",
                 "tz": "Australia/Sydney",
                 "recurring_rule": {
                     "frequency": "DAILY",
@@ -933,8 +933,8 @@ Feature: Events Update Repetitions
         [{
             "name": "Friday Club",
             "dates": {
-                "start": "2029-11-22T01:00:00.000Z",
-                "end": "2029-11-22T04:00:00.000Z",
+                "start": "2029-11-22T01:00:00+0000",
+                "end": "2029-11-22T04:00:00+0000",
                 "tz": "Australia/Sydney",
                 "recurring_rule": {
                     "frequency": "DAILY",
@@ -990,8 +990,8 @@ Feature: Events Update Repetitions
         """
         {
             "dates": {
-                "start": "2029-11-23T01:00:00.000Z",
-                "end": "2029-11-23T04:00:00.000Z",
+                "start": "2029-11-23T01:00:00+0000",
+                "end": "2029-11-23T04:00:00+0000",
                 "tz": "Australia/Sydney",
                 "recurring_rule": {
                     "frequency": "DAILY",
@@ -1080,8 +1080,8 @@ Feature: Events Update Repetitions
             "_id": "event1", "guid": "event1",
             "name": "TestEvent",
             "dates": {
-                "start": "2029-11-21T12:00:00.000Z",
-                "end": "2029-11-21T14:00:00.000Z",
+                "start": "2029-11-21T12:00:00+0000",
+                "end": "2029-11-21T14:00:00+0000",
                 "tz": "Australia/Sydney"
             },
             "state": "draft",
@@ -1095,8 +1095,8 @@ Feature: Events Update Repetitions
         """
         {
             "dates": {
-                "start": "2029-11-22T12:00:00.000Z",
-                "end": "2029-11-22T14:00:00.000Z",
+                "start": "2029-11-22T12:00:00+0000",
+                "end": "2029-11-22T14:00:00+0000",
                 "tz": "Australia/Sydney",
                 "recurring_rule": {
                     "frequency": "DAILY",
@@ -1120,8 +1120,8 @@ Feature: Events Update Repetitions
         [{
             "name": "Friday Club",
             "dates": {
-                "start": "2099-11-21T12:00:00.000Z",
-                "end": "2099-11-21T14:00:00.000Z",
+                "start": "2099-11-21T12:00:00+0000",
+                "end": "2099-11-21T14:00:00+0000",
                 "tz": "Australia/Sydney",
                 "recurring_rule": {
                     "frequency": "DAILY",
@@ -1143,8 +1143,8 @@ Feature: Events Update Repetitions
         """
         {
             "dates": {
-                "start": "2029-11-22T12:00:00.000Z",
-                "end": "2029-11-22T14:00:00.000Z",
+                "start": "2029-11-22T12:00:00+0000",
+                "end": "2029-11-22T14:00:00+0000",
                 "tz": "Australia/Sydney"
             }
         }
@@ -1171,16 +1171,16 @@ Feature: Events Update Repetitions
             "_id": "event1",
             "guid": "event1",
             "dates": {
-                "start": "2029-11-21T12:00:00.000Z",
-                "end": "2029-11-21T14:00:00.000Z",
+                "start": "2029-11-21T12:00:00+0000",
+                "end": "2029-11-21T14:00:00+0000",
                 "tz": "Australia/Sydney"
             }
         }, {
             "_id": "event2",
             "guid": "event2",
             "dates": {
-                "start": "2029-11-21T12:00:00.000Z",
-                "end": "2029-11-21T14:00:00.000Z",
+                "start": "2029-11-21T12:00:00+0000",
+                "end": "2029-11-21T14:00:00+0000",
                 "tz": "Australia/Sydney"
             },
             "lock_user": "#CONTEXT_USER_ID#",
@@ -1191,8 +1191,8 @@ Feature: Events Update Repetitions
             "_id": "event3",
             "guid": "event3",
             "dates": {
-                "start": "2029-11-21T12:00:00.000Z",
-                "end": "2029-11-21T14:00:00.000Z",
+                "start": "2029-11-21T12:00:00+0000",
+                "end": "2029-11-21T14:00:00+0000",
                 "tz": "Australia/Sydney"
             },
             "lock_user": "user123",
@@ -1203,8 +1203,8 @@ Feature: Events Update Repetitions
             "_id": "event4",
             "guid": "event4",
             "dates": {
-                "start": "2029-11-21T12:00:00.000Z",
-                "end": "2029-11-21T14:00:00.000Z",
+                "start": "2029-11-21T12:00:00+0000",
+                "end": "2029-11-21T14:00:00+0000",
                 "tz": "Australia/Sydney"
             },
             "lock_user": "#CONTEXT_USER_ID#",
@@ -1217,8 +1217,8 @@ Feature: Events Update Repetitions
         """
         {
             "dates": {
-                "start": "2029-11-21T02:00:00.000Z",
-                "end": "2029-11-21T04:00:00.000Z",
+                "start": "2029-11-21T02:00:00+0000",
+                "end": "2029-11-21T04:00:00+0000",
                 "tz": "Australia/Sydney"
             }
         }
@@ -1231,8 +1231,8 @@ Feature: Events Update Repetitions
         """
         {
             "dates": {
-                "start": "2029-11-21T02:00:00.000Z",
-                "end": "2029-11-21T04:00:00.000Z",
+                "start": "2029-11-21T02:00:00+0000",
+                "end": "2029-11-21T04:00:00+0000",
                 "tz": "Australia/Sydney"
             }
         }
@@ -1245,8 +1245,8 @@ Feature: Events Update Repetitions
         """
         {
             "dates": {
-                "start": "2029-11-21T02:00:00.000Z",
-                "end": "2029-11-21T04:00:00.000Z",
+                "start": "2029-11-21T02:00:00+0000",
+                "end": "2029-11-21T04:00:00+0000",
                 "tz": "Australia/Sydney"
             }
         }
@@ -1259,8 +1259,8 @@ Feature: Events Update Repetitions
         """
         {
             "dates": {
-                "start": "2029-11-21T02:00:00.000Z",
-                "end": "2029-11-21T04:00:00.000Z",
+                "start": "2029-11-21T02:00:00+0000",
+                "end": "2029-11-21T04:00:00+0000",
                 "tz": "Australia/Sydney"
             }
         }
@@ -1280,8 +1280,8 @@ Feature: Events Update Repetitions
         [{
             "name": "Friday Club",
             "dates": {
-                "start": "2029-11-22T01:00:00.000Z",
-                "end": "2029-11-22T04:00:00.000Z",
+                "start": "2029-11-22T01:00:00+0000",
+                "end": "2029-11-22T04:00:00+0000",
                 "tz": "Australia/Sydney",
                 "recurring_rule": {
                     "frequency": "DAILY",
@@ -1336,8 +1336,8 @@ Feature: Events Update Repetitions
         """
         {
             "dates": {
-                "start": "2029-11-23T01:00:00.000Z",
-                "end": "2029-11-23T04:00:00.000Z",
+                "start": "2029-11-23T01:00:00+0000",
+                "end": "2029-11-23T04:00:00+0000",
                 "tz": "Australia/Sydney",
                 "recurring_rule": {
                     "frequency": "DAILY",

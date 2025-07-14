@@ -270,8 +270,8 @@ Feature: Planning Item Locking
         [{
             "name": "Friday Club",
             "dates": {
-                "start": "2019-11-21T12:00:00.000Z",
-                "end": "2019-11-21T14:00:00.000Z",
+                "start": "2019-11-21T12:00:00+0000",
+                "end": "2019-11-21T14:00:00+0000",
                 "tz": "Australia/Sydney",
                 "recurring_rule": {
                     "frequency": "WEEKLY",
@@ -389,8 +389,8 @@ Feature: Planning Item Locking
       [{
           "name": "Friday Club",
           "dates": {
-              "start": "2019-11-21T12:00:00.000Z",
-              "end": "2019-11-21T14:00:00.000Z",
+              "start": "2019-11-21T12:00:00+0000",
+              "end": "2019-11-21T14:00:00+0000",
               "tz": "Australia/Sydney",
               "recurring_rule": {
                   "frequency": "WEEKLY",

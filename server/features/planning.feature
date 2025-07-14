@@ -558,7 +558,7 @@ Feature: Planning
                       "ednote": "test coverage, 250 words",
                       "headline": "test headline",
                       "slugline": "test slugline",
-                      "scheduled": "2029-11-21T14:00:00.000Z",
+                      "scheduled": "2029-11-21T14:00:00+0000",
                       "g2_content_type": "text"
                   },
                   "news_coverage_status": {
@@ -585,7 +585,7 @@ Feature: Planning
                       "ednote": "test coverage, 250 words",
                       "headline": "test headline",
                       "slugline": "test slugline",
-                      "scheduled": "2029-11-21T14:00:00.000Z",
+                      "scheduled": "2029-11-21T14:00:00+0000",
                       "g2_content_type": "text",
                       "internal_note" : "\n\n------------------------------------------------------------\nCoverage cancelled\n"
                   }
@@ -950,8 +950,8 @@ Feature: Planning
                 "unique_id": "123",
                 "name": "Friday Club",
                 "dates": {
-                    "start": "2016-11-17T12:00:00.000Z",
-                    "end": "2016-11-17T14:00:00.000Z",
+                    "start": "2016-11-17T12:00:00+0000",
+                    "end": "2016-11-17T14:00:00+0000",
                     "tz": "Europe/Berlin",
                     "recurring_rule": {
                         "frequency": "WEEKLY",
@@ -1023,7 +1023,7 @@ Feature: Planning
                       "ednote": "test coverage, 250 words",
                       "headline": "test headline",
                       "slugline": "test slugline",
-                      "scheduled": "2029-11-21T14:00:00.000Z",
+                      "scheduled": "2029-11-21T14:00:00+0000",
                       "g2_content_type": "text",
                       "internal_note": "Harmless"
                   },
@@ -1048,7 +1048,7 @@ Feature: Planning
                       "internal_note" : "Mostly harmless",
                       "g2_content_type": "text",
                       "slugline": "test slugline",
-                      "scheduled": "2029-11-21T14:00:00.000Z"
+                      "scheduled": "2029-11-21T14:00:00+0000"
                   },
                   "assigned_to": {
                         "desk": "#desks._id#",
@@ -1102,7 +1102,7 @@ Feature: Planning
                       "ednote": "test coverage, 250 words",
                       "headline": "test headline",
                       "slugline": "test slugline",
-                      "scheduled": "2029-11-21T14:00:00.000Z",
+                      "scheduled": "2029-11-21T14:00:00+0000",
                       "g2_content_type": "text",
                       "internal_note": "Harmless"
                   },
@@ -1126,7 +1126,7 @@ Feature: Planning
                   "planning": {
                       "g2_content_type": "text",
                       "slugline": "test slugline",
-                      "scheduled": "2030-11-21T13:00:00.000Z",
+                      "scheduled": "2030-11-21T13:00:00+0000",
                       "internal_note": "Harmless"
                   },
                   "assigned_to": {
@@ -1351,7 +1351,7 @@ Feature: Planning
                       "ednote": "test coverage, 250 words",
                       "headline": "test headline",
                       "slugline": "test slugline",
-                      "scheduled": "2029-11-21T14:00:00.000Z",
+                      "scheduled": "2029-11-21T14:00:00+0000",
                       "g2_content_type": "text",
                       "internal_note": "Harmless"
                   },
@@ -1375,7 +1375,7 @@ Feature: Planning
                       "internal_note" : "Mostly harmless",
                       "g2_content_type": "text",
                       "slugline": "test slugline",
-                      "scheduled": "2029-11-21T14:00:00.000Z"
+                      "scheduled": "2029-11-21T14:00:00+0000"
                   },
                   "assigned_to": {
                         "desk": "#desks._id#",
@@ -1553,7 +1553,7 @@ Feature: Planning
               "headline": "test headline",
               "slugline": "test slugline",
               "g2_content_type" : "text",
-              "scheduled": "2029-11-21T14:00:00.000Z"
+              "scheduled": "2029-11-21T14:00:00+0000"
           },
           "assigned_to": {
               "desk": "desk_123",
@@ -1578,7 +1578,7 @@ Feature: Planning
                       "ednote": "test coverage, 250 words",
                       "headline": "test headline",
                       "slugline": "test slugline",
-                      "scheduled": "2029-11-21T14:00:00.000Z",
+                      "scheduled": "2029-11-21T14:00:00+0000",
                       "g2_content_type": "text",
                       "internal_note": "Harmless"
                   },
@@ -1605,7 +1605,7 @@ Feature: Planning
                       "ednote": "test coverage, 250 words",
                       "headline": "test headline",
                       "slugline": "test slugline",
-                      "scheduled": "2029-11-21T14:00:00.000Z",
+                      "scheduled": "2029-11-21T14:00:00+0000",
                       "g2_content_type": "text",
                       "internal_note": "Harmless"
                   },
@@ -1642,8 +1642,8 @@ Feature: Planning
             {
                 "name": "test name",
                 "dates": {
-                    "start": "2016-11-17T12:00:00.000Z",
-                    "end": "2016-11-17T14:00:00.000Z",
+                    "start": "2016-11-17T12:00:00+0000",
+                    "end": "2016-11-17T14:00:00+0000",
                     "tz": "Europe/Berlin"
                 }
             }
@@ -1684,8 +1684,8 @@ Feature: Planning
             {
                 "name": "test name",
                 "dates": {
-                    "start": "2016-11-17T12:00:00.000Z",
-                    "end": "2016-11-17T14:00:00.000Z",
+                    "start": "2016-11-17T12:00:00+0000",
+                    "end": "2016-11-17T14:00:00+0000",
                     "tz": "Europe/Berlin"
                 }
             }
@@ -2110,7 +2110,7 @@ Feature: Planning
                     "ednote": "test coverage, 250 words",
                     "headline": "test headline",
                     "slugline": "test slugline",
-                    "scheduled": "2029-11-21T14:00:00.000Z",
+                    "scheduled": "2029-11-21T14:00:00+0000",
                     "g2_content_type": "text"
                 },
                 "workflow_status": "draft",
@@ -2156,7 +2156,7 @@ Feature: Planning
                     "ednote": "test coverage, 250 words",
                     "headline": "test headline",
                     "slugline": "test slugline",
-                    "scheduled": "2029-11-21T14:00:00.000Z",
+                    "scheduled": "2029-11-21T14:00:00+0000",
                     "g2_content_type": "text"
                 },
                 "workflow_status": "draft",
@@ -2179,7 +2179,7 @@ Feature: Planning
                     "ednote": "test coverage, 250 words",
                     "headline": "test headline",
                     "slugline": "test slugline",
-                    "scheduled": "2029-11-21T14:00:00.000Z",
+                    "scheduled": "2029-11-21T14:00:00+0000",
                     "g2_content_type": "text"
                 },
                 "workflow_status": "draft",
@@ -2202,7 +2202,7 @@ Feature: Planning
                     "ednote": "test coverage, 250 words",
                     "headline": "test headline",
                     "slugline": "test slugline",
-                    "scheduled": "2029-11-21T14:00:00.000Z",
+                    "scheduled": "2029-11-21T14:00:00+0000",
                     "g2_content_type": "text"
                 },
                 "workflow_status": "draft",
@@ -2229,7 +2229,7 @@ Feature: Planning
                     "ednote": "test coverage, 250 words",
                     "headline": "test headline",
                     "slugline": "test slugline",
-                    "scheduled": "2029-11-21T14:00:00.000Z",
+                    "scheduled": "2029-11-21T14:00:00+0000",
                     "g2_content_type": "text"
                 },
                 "workflow_status": "active",
@@ -2331,7 +2331,7 @@ Feature: Planning
                         },
                         "planning": {
                             "internal_note": "Int. note",
-                            "scheduled": "2029-11-21T14:00:00.000Z"
+                            "scheduled": "2029-11-21T14:00:00+0000"
                         }
                     }]
                 }
@@ -2450,7 +2450,7 @@ Feature: Planning
                         },
                         "planning": {
                             "internal_note": "Int. note",
-                            "scheduled": "2029-11-21T14:00:00.000Z"
+                            "scheduled": "2029-11-21T14:00:00+0000"
                         }
                     }]
                 }
@@ -2531,7 +2531,7 @@ Feature: Planning
                         "ednote": "test coverage, I want 250 words",
                         "headline": "test headline",
                         "slugline": "test slugline",
-                        "scheduled": "2029-11-21T14:00:00.000Z"
+                        "scheduled": "2029-11-21T14:00:00+0000"
                     },
                     "scheduled_updates": [{
                         "coverage_id": "#firstcoverage#",
@@ -2541,7 +2541,7 @@ Feature: Planning
                         },
                         "planning": {
                             "internal_note": "Int. note",
-                            "scheduled": "2029-11-20T14:00:00.000Z"
+                            "scheduled": "2029-11-20T14:00:00+0000"
                         }
                     }]
                 }
@@ -2566,7 +2566,7 @@ Feature: Planning
                         "ednote": "test coverage, I want 250 words",
                         "headline": "test headline",
                         "slugline": "test slugline",
-                        "scheduled": "2029-11-21T14:00:00.000Z"
+                        "scheduled": "2029-11-21T14:00:00+0000"
                     },
                     "scheduled_updates": [{
                         "coverage_id": "#firstcoverage#",
@@ -2576,7 +2576,7 @@ Feature: Planning
                         },
                         "planning": {
                             "internal_note": "Int. note",
-                            "scheduled": "2029-11-25T14:00:00.000Z"
+                            "scheduled": "2029-11-25T14:00:00+0000"
                         }
                     }, {
                         "coverage_id": "#firstcoverage#",
@@ -2586,7 +2586,7 @@ Feature: Planning
                         },
                         "planning": {
                             "internal_note": "Int. note",
-                            "scheduled": "2029-11-23T14:00:00.000Z"
+                            "scheduled": "2029-11-23T14:00:00+0000"
                         }
                     }]
                 }
@@ -2672,7 +2672,7 @@ Feature: Planning
                         "ednote": "test coverage, I want 250 words",
                         "headline": "test headline",
                         "slugline": "test slugline",
-                        "scheduled": "2029-11-21T14:00:00.000Z"
+                        "scheduled": "2029-11-21T14:00:00+0000"
                     },
                     "assigned_to": {
                         "desk": "Politic Desk",
@@ -2691,7 +2691,7 @@ Feature: Planning
                         },
                         "planning": {
                             "internal_note": "Int. note",
-                            "scheduled": "2029-11-27T14:00:00.000Z"
+                            "scheduled": "2029-11-27T14:00:00+0000"
                         }
                     }]
                 }
@@ -2783,7 +2783,7 @@ Feature: Planning
                         "ednote": "test coverage, I want 250 words",
                         "headline": "test headline",
                         "slugline": "test slugline",
-                        "scheduled": "2029-11-21T14:00:00.000Z"
+                        "scheduled": "2029-11-21T14:00:00+0000"
                     },
                     "assigned_to": {
                         "desk": "Politic Desk",
@@ -2802,7 +2802,7 @@ Feature: Planning
                         },
                         "planning": {
                             "internal_note": "Int. note",
-                            "scheduled": "2029-11-27T14:00:00.000Z"
+                            "scheduled": "2029-11-27T14:00:00+0000"
                         }
                     }]
                 }
@@ -2935,7 +2935,7 @@ Feature: Planning
                         "ednote": "test coverage, I want 250 words",
                         "headline": "test headline",
                         "slugline": "test slugline",
-                        "scheduled": "2029-11-21T14:00:00.000Z"
+                        "scheduled": "2029-11-21T14:00:00+0000"
                     },
                     "assigned_to": {
                         "desk": "Politic Desk",
@@ -2954,7 +2954,7 @@ Feature: Planning
                         },
                         "planning": {
                             "internal_note": "Int. note",
-                            "scheduled": "2029-11-27T14:00:00.000Z"
+                            "scheduled": "2029-11-27T14:00:00+0000"
                         }
                     }]
                 }
@@ -3115,7 +3115,7 @@ Feature: Planning
                         "ednote": "test coverage, I want 250 words",
                         "headline": "test headline",
                         "slugline": "test slugline",
-                        "scheduled": "2029-11-21T14:00:00.000Z"
+                        "scheduled": "2029-11-21T14:00:00+0000"
                     },
                     "assigned_to": {
                         "desk": "Politic Desk",
@@ -3134,7 +3134,7 @@ Feature: Planning
                         },
                         "planning": {
                             "internal_note": "Int. note",
-                            "scheduled": "2029-11-27T14:00:00.000Z"
+                            "scheduled": "2029-11-27T14:00:00+0000"
                         }
                     },
                     {
@@ -3232,7 +3232,7 @@ Feature: Planning
                         "ednote": "test coverage, I want 250 words",
                         "headline": "test headline",
                         "slugline": "test slugline",
-                        "scheduled": "2029-11-21T14:00:00.000Z"
+                        "scheduled": "2029-11-21T14:00:00+0000"
                     },
                     "assigned_to": {
                         "desk": "Politic Desk",
@@ -3251,7 +3251,7 @@ Feature: Planning
                         },
                         "planning": {
                             "internal_note": "Int. note",
-                            "scheduled": "2029-11-27T14:00:00.000Z"
+                            "scheduled": "2029-11-27T14:00:00+0000"
                         }
                     },
                     {
@@ -3446,7 +3446,7 @@ Feature: Planning
                         "ednote": "test coverage, I want 250 words",
                         "headline": "test headline",
                         "slugline": "test slugline",
-                        "scheduled": "2029-11-21T14:00:00.000Z"
+                        "scheduled": "2029-11-21T14:00:00+0000"
                     },
                     "assigned_to": {
                         "assignment_id": "#firstassignment#",
@@ -3466,7 +3466,7 @@ Feature: Planning
                         },
                         "planning": {
                             "internal_note": "Int. note",
-                            "scheduled": "2029-11-27T14:00:00.000Z"
+                            "scheduled": "2029-11-27T14:00:00+0000"
                         }
                     },
                     {
@@ -3581,7 +3581,7 @@ Feature: Planning
                         "ednote": "test coverage, I want 250 words",
                         "headline": "test headline",
                         "slugline": "test slugline",
-                        "scheduled": "2029-11-21T14:00:00.000Z"
+                        "scheduled": "2029-11-21T14:00:00+0000"
                     },
                     "assigned_to": {
                         "assignment_id": "#firstassignment#",
@@ -3603,7 +3603,7 @@ Feature: Planning
                         },
                         "planning": {
                             "internal_note": "Int. note",
-                            "scheduled": "2029-11-27T14:00:00.000Z"
+                            "scheduled": "2029-11-27T14:00:00+0000"
                         }
                     },
                     {
@@ -4345,8 +4345,8 @@ Feature: Planning
             "name": "Primary Event 1",
             "slugline": "event-1",
             "dates": {
-                "start": "2029-11-21T12:00:00.000Z",
-                "end": "2029-11-21T14:00:00.000Z",
+                "start": "2029-11-21T12:00:00+0000",
+                "end": "2029-11-21T14:00:00+0000",
                 "tz": "Australia/Sydney"
             }
         }, {
@@ -4354,8 +4354,8 @@ Feature: Planning
             "name": "Primary Event 2",
             "slugline": "event-2",
             "dates": {
-                "start": "2029-11-21T12:00:00.000Z",
-                "end": "2029-11-21T14:00:00.000Z",
+                "start": "2029-11-21T12:00:00+0000",
+                "end": "2029-11-21T14:00:00+0000",
                 "tz": "Australia/Sydney"
             }
         }]

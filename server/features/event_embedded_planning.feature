@@ -18,7 +18,7 @@ Feature: Event Embedded Planning
                 "coverages": [{
                     "g2_content_type": "text",
                     "news_coverage_status": "ncostat:int",
-                    "scheduled": "2029-11-21T15:00:00.000Z",
+                    "scheduled": "2029-11-21T15:00:00+0000",
                     "coverage_provider": {
                         "name":"Stringer",
                         "qcode":"stringer",
@@ -95,7 +95,7 @@ Feature: Event Embedded Planning
                         "g2_content_type": "text",
                         "news_coverage_status": "ncostat:int",
                         "language": "en",
-                        "scheduled": "2029-11-21T15:00:00.000Z",
+                        "scheduled": "2029-11-21T15:00:00+0000",
                         "internal_note": "note something here",
                         "slugline": "test"
                     },
@@ -103,7 +103,7 @@ Feature: Event Embedded Planning
                         "g2_content_type": "picture",
                         "news_coverage_status": "ncostat:onreq",
                         "language": "en",
-                        "scheduled": "2029-11-21T16:00:00.000Z",
+                        "scheduled": "2029-11-21T16:00:00+0000",
                         "internal_note": "only if enough demand",
                         "slugline": "test"
                     }
@@ -146,7 +146,7 @@ Feature: Event Embedded Planning
                         "g2_content_type": "picture",
                         "news_coverage_status": "ncostat:onreq",
                         "language": "en",
-                        "scheduled": "2029-11-21T16:00:00.000Z",
+                        "scheduled": "2029-11-21T16:00:00+0000",
                         "internal_note": "only if enough demand",
                         "slugline": "test"
                     }
