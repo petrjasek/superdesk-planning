@@ -189,8 +189,20 @@ declare module 'superdesk-api' {
             all_day?: boolean;
         };
 
+        external_contacts?: {
+            create_url: string;
+            edit_url: string;
+        };
+
         coverage?: {
             getDueDateStrategy?(planningItem: IPlanningItem, eventItem?: IEventItem): moment.Moment | null;
+
+            assignments?: {
+                fields?: {
+                    coverageProvider?: boolean;
+                    assignmentPriority?: boolean;
+                };
+            };
         };
     }
 }
