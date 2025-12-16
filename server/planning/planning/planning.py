@@ -48,7 +48,6 @@ from planning.types import (
 )
 from planning.planning.planning_history_async_service import PlanningHistoryAsyncService
 from planning.planning.planning_autosave_service import PlanningAutosaveAsyncService
-from planning.assignments.assignments_history_async import AssignmentsHistoryAsyncService
 from planning.content_profiles.planning_types_async_service import PlanningTypesAsyncService
 from planning.common import (
     get_coverage_status_from_cv,
@@ -543,8 +542,6 @@ class PlanningService(AsyncBaseService):
             scheduled_update = updated_coverage.get("scheduled_update") or original_coverage.get("scheduled_update")
             if scheduled_update:
                 assignment["scheduled_update_id"] = scheduled_update
-
-            await AssignmentsHistoryAsyncService().on_item_deleted(assignment)
 
     async def on_updated_async(self, updates, original, from_ingest=False):
         await self._process_removed_assignments(updates, original)

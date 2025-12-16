@@ -43,7 +43,6 @@ from planning.common import (
     sync_assignment_details_to_coverages,
 )
 from planning.core.service import BasePlanningAsyncService
-from planning.assignments.assignments_history_async import AssignmentsHistoryAsyncService
 from planning.planning.planning_history_async_service import PlanningHistoryAsyncService
 from planning.content_profiles.planning_types_async_service import PlanningTypesAsyncService
 from planning.types import (
@@ -1157,8 +1156,6 @@ class PlanningAsyncService(BasePlanningAsyncService[PlanningResourceModel]):
         }
         if coverage_doc.get("scheduled_update"):
             assignment["scheduled_update_id"] = coverage_doc.get("scheduled_update_id")
-
-        await AssignmentsHistoryAsyncService().on_item_deleted(assignment)
 
     def _cancel_coverage_if_needed(
         self, original_coverage: dict[str, Any], coverage_updates: dict[str, Any], original_assignment: dict[str, Any]

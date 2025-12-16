@@ -1374,6 +1374,16 @@ class AssignmentsService(AsyncBaseService):
         else:
             updated_planning = doc
 
+        # Create assignment history entry to track the removal
+        # This should always happen regardless of update_planning flag
+        assignment_history = {
+            "planning_item": doc.get("planning_item"),
+            "coverage_item": doc.get("coverage_item"),
+        }
+        if doc.get("scheduled_update_id"):
+            assignment_history["scheduled_update_id"] = doc.get("scheduled_update_id")
+        await AssignmentsHistoryAsyncService().on_item_deleted(assignment_history)
+
         # Finally send a notification to connected clients that the Assignment
         # has been removed
         archive_item = await get_resource_service("archive").find_one_async(req=None, assignment_id=doc.get(ID_FIELD))
