@@ -25,6 +25,7 @@ function copyAssignmentDetailsToCoverage(
     assignment: IAssignmentItem,
     coverageAssignedTo: DeepPartial<IPlanningAssignedTo>,
 ): void {
+    coverageAssignedTo.assignment_id = assignment._id;
     coverageAssignedTo.desk = assignment.assigned_to.desk;
     coverageAssignedTo.user = assignment.assigned_to.user;
     coverageAssignedTo.contact = assignment.assigned_to.contact;
