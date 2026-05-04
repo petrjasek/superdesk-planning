@@ -506,6 +506,12 @@ class PlanningService(AsyncBaseService):
         return len(changed_ids) > 0
 
     async def _process_removed_assignments(self, updates: dict, original: dict) -> None:
+        if "coverages" not in updates:
+            # Coverages weren't part of this update (e.g. a pubstatus/state-only update
+            # from post_planning). Nothing to process — absence of the key is NOT the same
+            # as all coverages being removed.
+            return
+
         assignment_service = get_resource_service("assignments")
         planning_item = deepcopy(original)
         planning_item.update(deepcopy(updates))
