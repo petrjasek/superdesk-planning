@@ -28,9 +28,10 @@ class NewsCoverageQcodes(str, Enum):
 
 
 class NewsCoverageStatus(Dataclass):
-    qcode: NewsCoverageQcodes = Field(description="Qcode of the news coverage status")
-    name: fields.Keyword = Field(description="Name of the news coverage status")
-    label: fields.Keyword = Field(description="Label for news coverage status")
+    # all fields optional to preserve pre-unified behaviour where this could be partially/never set
+    qcode: NewsCoverageQcodes | None = Field(description="Qcode of the news coverage status", default=None)
+    name: fields.Keyword | None = Field(description="Name of the news coverage status", default=None)
+    label: fields.Keyword | None = Field(description="Label for news coverage status", default=None)
 
 
 class CoverageFlags(Dataclass):
@@ -169,7 +170,9 @@ class CoverageScheduledUpdatePlanning(Dataclass):
 
 class CoverageScheduledUpdate(Dataclass):
     coverage_id: fields.Keyword = Field(description="Parent Coverage ID")
-    news_coverage_status: NewsCoverageStatus = Field(description="The news coverage status of the item")
+    news_coverage_status: NewsCoverageStatus = Field(
+        description="The news coverage status of the item", default_factory=NewsCoverageStatus
+    )
     scheduled_update_id: fields.Keyword = Field(
         description="Scheduled update ID", default_factory=lambda: f"tempId-{generate_guid(type=GUID_NEWSML)}"
     )
@@ -195,7 +198,9 @@ class CoverageItem(AuditInformation, BaseModel):
     profile: Annotated[fields.ObjectId | None, validate_data_relation_async("planning_types")] = Field(
         description="ID of the Coverage profile", default=None
     )
-    news_coverage_status: NewsCoverageStatus = Field(description="The news coverage status of the item")
+    news_coverage_status: NewsCoverageStatus = Field(
+        description="The news coverage status of the item", default_factory=NewsCoverageStatus
+    )
     workflow_status: WorkflowState = Field(description="The workflow status of the item", default=WorkflowState.DRAFT)
     previous_status: WorkflowState | None = Field(
         description="The previous workflow status of the item",

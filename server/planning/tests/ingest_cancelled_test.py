@@ -2,6 +2,7 @@ from flask import request
 
 from superdesk.tests import utils as test_utils, fixtures
 from superdesk.flask import g
+from superdesk.utc import utcnow
 
 from planning.tests import TestCase, fixtures as planning_fixtures
 from planning.common import update_post_item
@@ -23,6 +24,7 @@ class IngestCancelledTestCase(TestCase):
             "_id": "p1",
             "name": "planning item",
             "type": "planning",
+            "planning_date": utcnow(),
             "coverages": [
                 {
                     "coverage_id": "c1",

@@ -37,6 +37,7 @@ class EventsBaseTestCase(TestCase):
         await test_utils.post_items("users", fixtures.users.all_users())
         g.user = fixtures.users.admin().to_dict()
         await test_utils.post_items("desks", fixtures.desks.all_desks())
+        await test_utils.post_items("vocabularies", planning_fixtures.cvs.all_cvs())
         await planning_fixtures.publish_config.configure_planning_publishing()
 
 
@@ -564,6 +565,11 @@ def generate_recurring_events(num_events):
 
 
 class EventsRelatedPlanningAutoPublish(EventsBaseTestCase):
+    app_config = {
+        **TestCase.app_config.copy(),
+        "ELASTICSEARCH_FORCE_REFRESH": True,
+    }
+
     async def test_planning_item_is_published_with_events(self):
         planning_service = get_resource_service("planning")
         event = {
@@ -636,7 +642,6 @@ class EventsRelatedPlanningAutoPublish(EventsBaseTestCase):
             "planning_types",
             [
                 {
-                    "_id": "event",
                     "name": "event",
                     "type": "event",
                     "editor": {
@@ -766,7 +771,6 @@ class EventsRelatedPlanningAutoPublish(EventsBaseTestCase):
                         "scheduled": datetime(2099, 11, 21, 12, 00, 00, tzinfo=pytz.UTC),
                         "g2_content_type": "text",
                         "language": "en",
-                        "genre": "None",
                     },
                     "news_coverage_status": {
                         "qcode": "ncostat:int",
@@ -784,7 +788,6 @@ class EventsRelatedPlanningAutoPublish(EventsBaseTestCase):
             "planning_types",
             [
                 {
-                    "_id": "event",
                     "name": "event",
                     "type": "event",
                     "editor": {
@@ -795,8 +798,8 @@ class EventsRelatedPlanningAutoPublish(EventsBaseTestCase):
                     },
                 },
                 {
-                    "_id": "planning",
                     "name": "planning",
+                    "type": "planning",
                     "editor": {"subject": {"enabled": False}},
                     "schema": {"subject": {"required": True}},
                 },

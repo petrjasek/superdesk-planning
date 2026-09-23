@@ -65,6 +65,10 @@ async def on_event_create(event: UnifiedPlanningResource, events: list[UnifiedPl
         recurring_events = generate_recurring_events(event)
         generated_events.extend(recurring_events)
 
+        # Group the whole series (including this, the first/master Event) under
+        # the master's own id, matching the ``recurrence_id`` set on generated events.
+        event.recurrence_id = event.id
+
         # Set the current Event to the first Event in the new series
         # This will make sure the ID of the Event can be used when
         # using 'event' from here on, such as when linking to a Planning item
@@ -287,6 +291,11 @@ def generate_recurring_events(
     # compute the difference between start and end in the original event
     time_delta = event.dates.end - event.dates.start
 
+    # ``generate_recurring_dates`` always returns naive UTC datetimes when a ``tz`` is
+    # supplied, so compare against a naive version of the original start to correctly
+    # skip it (otherwise a duplicate event is generated for the first occurrence).
+    original_start = event.dates.start.replace(tzinfo=None) if event.dates.start.tzinfo else event.dates.start
+
     # for all the dates based on the reucrring rules:
     for occurence_date in itertools.islice(
         generate_recurring_dates(
@@ -303,7 +312,8 @@ def generate_recurring_events(
         0,
         get_config(int, "MAX_RECURRENT_EVENTS", 200),  # set a limit to prevent too many events to be created
     ):
-        if occurence_date == event.dates.start:
+        occurence_date_naive = occurence_date.replace(tzinfo=None) if occurence_date.tzinfo else occurence_date
+        if occurence_date_naive == original_start:
             # Skipping this Event, as it's the original
             continue
 

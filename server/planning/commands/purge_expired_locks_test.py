@@ -125,9 +125,11 @@ class PurgeExpiredLocksTest(TestCase):
 
     async def insert(self, item_type, items):
         if item_type == "assignments":
-            # Assignments still reference a planning item in the legacy resource (SDBELGA-1122)
-            legacy_planning = get_service("planning")
-            await legacy_planning.create([{"_id": "legacy_plan", "guid": "legacy_plan", "planning_date": now}])
+            # AssignmentResourceModel.planning_item validates against the unified_planning resource
+            unified_planning = UnifiedPlanningResource.get_service()
+            await unified_planning.create(
+                [{"_id": "legacy_plan", "guid": "legacy_plan", "type": "planning", "dates": {"start": now}}]
+            )
             for item in items:
                 item["planning_item"] = "legacy_plan"
             service = get_service(item_type)

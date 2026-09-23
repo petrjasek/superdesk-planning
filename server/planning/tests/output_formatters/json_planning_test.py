@@ -419,7 +419,10 @@ class JsonPlanningTestCase(TestCase):
         item = deepcopy(self.item)
         self.assertEqual((await self.format(item))["event_item"], "event_prim_1")
 
-        await self.app.data.insert_async("events", [{"_id": "event_prim_1", "name": "Event 1"}])
+        await self.app.data.insert_async(
+            "events",
+            [{"_id": "event_prim_1", "name": "Event 1", "dates": {"start": "2018-04-09T14:00:00.000Z", "end": "2018-04-09T15:00:00.000Z"}}],
+        )
 
         item["related_events"] = [
             PlanningRelatedEventLink(

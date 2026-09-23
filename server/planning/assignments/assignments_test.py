@@ -2,6 +2,7 @@ from planning.tests import TestCase
 from superdesk import get_resource_service
 from superdesk.flask import g
 from bson import ObjectId
+from copy import deepcopy
 
 
 class AssignmentsTestCase(TestCase):
@@ -77,10 +78,10 @@ class AssignmentsTestCase(TestCase):
         self.app.data.insert("desks", self.desks)
         self.app.data.insert("stages", self.stages)
         self.app.data.insert("auth", self.auth)
-        self.app.data.insert("archive", [self.archive_item])
-        self.app.data.insert("assignments", [self.assignment_item])
-        await self.app.data.insert_async("planning", [self.planning_item])
-        self.app.data.insert("delivery", [self.delivery_item])
+        self.app.data.insert("archive", [deepcopy(self.archive_item)])
+        self.app.data.insert("assignments", [deepcopy(self.assignment_item)])
+        await self.app.data.insert_async("planning", [deepcopy(self.planning_item)])
+        self.app.data.insert("delivery", [deepcopy(self.delivery_item)])
 
         g.user = self.users[0]
         g.auth = self.auth[0]
@@ -110,6 +111,6 @@ class AssignmentsTestCase(TestCase):
                 "guid": self.archive_item["guid"],
                 "_type": "archive",
                 "event_id": self.archive_item["event_id"],
-                "assignment_id": self.assignment_item["_id"],
+                "assignment_id": str(self.assignment_item["_id"]),
             },
         )

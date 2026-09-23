@@ -10,6 +10,7 @@
 
 from .delete_marked_assignments import DeleteMarkedAssignments
 from planning.tests import TestCase
+from planning.types.unified import UnifiedPlanningResource
 from planning.utils import get_service
 from superdesk.flask import g
 from superdesk.utc import utcnow
@@ -59,8 +60,10 @@ class DeleteMarkedAssignmentsTest(TestCase):
         async with self.app.app_context():
             self.app.data.insert("users", self.users)
             self.app.data.insert("auth", self.auth)
-            # Assignments still reference planning items in the legacy resource (SDBELGA-1122)
-            await get_service("planning").create([{**plan, "planning_date": now} for plan in self.plans])
+            # AssignmentResourceModel.planning_item validates against the unified_planning resource
+            await UnifiedPlanningResource.get_service().create(
+                [{**plan, "type": "planning", "dates": {"start": now}} for plan in self.plans]
+            )
             await self.assignment_service.create(self.assignments)
 
             g.user = self.users[0]
