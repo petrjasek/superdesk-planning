@@ -65,10 +65,7 @@ class UnifiedResourceEventsTestCase(TestCase):
         with mock.patch("planning.unified.notifications.push_notification") as push_notification:
             await self.planning_service.update(new_event.id, {"name": "Updated Event"})
 
-        resource_update = next(
-            call for call in push_notification.call_args_list
-            if call.args == ("resource:updated",)
-        )
+        resource_update = next(call for call in push_notification.call_args_list if call.args == ("resource:updated",))
         self.assertEqual(resource_update.kwargs["resource"], "events")
         self.assertEqual(resource_update.kwargs["_id"], str(new_event.id))
         self.assertIn("name", resource_update.kwargs["fields"])
